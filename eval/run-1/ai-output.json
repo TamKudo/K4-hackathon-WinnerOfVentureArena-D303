@@ -1,0 +1,394 @@
+{
+  "concepts": [
+    {
+      "id": "AI",
+      "name": "Artificial Intelligence (AI)",
+      "tier": "core",
+      "short_summary": "Hệ thống có trí thông minh, tái tạo và mô phỏng trí thông minh con người",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "AI là một từ bao phủ tất cả những từ bên trong.",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "AI — tắt của artificial intelligence. AI là một từ bao phủ tất cả những từ bên trong."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Được giảng viên định nghĩa rõ ràng và là nền tảng cho các khái niệm khác",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "AI — tắt của artificial intelligence. AI là một từ bao phủ tất cả những từ bên trong."
+          }
+        }
+      ]
+    },
+    {
+      "id": "MachineLearning",
+      "name": "Machine Learning",
+      "tier": "core",
+      "short_summary": "Thế hệ tiếp theo của AI, cho phép máy học từ dữ liệu",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Machine learning là thế hệ tiếp theo của AI.",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "Vòng bên trong là machine learning — thế hệ tiếp theo: sau khi đặt ra câu hỏi đấy, họ trả lời bằng một lời giải là bây giờ tôi có thể cung cấp các dữ liệu cho máy — liệu máy có thể học được từ các dữ liệu đấy không"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Được giảng viên định nghĩa rõ ràng và là một phần quan trọng của AI",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "Vòng bên trong là machine learning — thế hệ tiếp theo: sau khi đặt ra câu hỏi đấy, họ trả lời bằng một lời giải là bây giờ tôi có thể cung cấp các dữ liệu cho máy — liệu máy có thể học được từ các dữ liệu đấy không"
+          }
+        }
+      ]
+    },
+    {
+      "id": "DeepLearning",
+      "name": "Deep Learning",
+      "tier": "core",
+      "short_summary": "Ý tưởng về việc tái tạo mạng neuron thần kinh giống như cách con người suy luận",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Deep learning là ý tưởng về việc tái tạo được một mạng neuron thần kinh giống như cách con người suy luận.",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "Vòng tiếp theo bên trong là tập con nữa: deep learning. Deep learning là ý tưởng về việc liệu tôi có thể tái tạo được một mạng neuron thần kinh giống như cách con người suy luận hay không"
+          }
+        },
+        {
+          "text": "Deep learning là một phương pháp học máy cho phép máy tính tự học từ dữ liệu.",
+          "evidence": {
+            "segmentId": "T04-030",
+            "quote": "Ý tưởng khiến cho máy móc có thể học được rất nhiều dữ liệu là tái tạo được mạng neuron thần kinh giống như con người"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Được giảng viên định nghĩa rõ ràng và là một phần quan trọng của AI",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "Vòng tiếp theo bên trong là tập con nữa: deep learning. Deep learning là ý tưởng về việc liệu tôi có thể tái tạo được một mạng neuron thần kinh giống như cách con người suy luận hay không"
+          }
+        },
+        {
+          "text": "Giảng viên giải thích về deep learning như một phương pháp học máy quan trọng",
+          "evidence": {
+            "segmentId": "T04-030",
+            "quote": "Ý tưởng khiến cho máy móc có thể học được rất nhiều dữ liệu là tái tạo được mạng neuron thần kinh giống như con người"
+          }
+        }
+      ]
+    },
+    {
+      "id": "GenerativeAI",
+      "name": "Generative AI",
+      "tier": "core",
+      "short_summary": "Công nghệ AI tạo sinh, nằm đằng sau các chatbot thông minh",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Generative AI là công nghệ AI tạo sinh, nằm đằng sau các chatbot thông minh.",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "Và tầng bên trong cùng là tầng của generative AI — tầng con của các tầng bên ngoài. Đấy là công nghệ AI tạo sinh — tiếng Việt là AI tạo sinh — nằm đằng sau các chatbot thông minh bây giờ: ChatGPT, Claude mà mọi người đang xài"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Được giảng viên định nghĩa rõ ràng và là một phần quan trọng của AI",
+          "evidence": {
+            "segmentId": "T04-015",
+            "quote": "Và tầng bên trong cùng là tầng của generative AI — tầng con của các tầng bên ngoài. Đấy là công nghệ AI tạo sinh — tiếng Việt là AI tạo sinh — nằm đằng sau các chatbot thông minh bây giờ: ChatGPT, Claude mà mọi người đang xài"
+          }
+        }
+      ]
+    },
+    {
+      "id": "TuringTest",
+      "name": "Turing Test",
+      "tier": "supporting",
+      "short_summary": "Bài test đơn giản để kiểm tra trí thông minh của máy tính",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Turing Test là một bài test đơn giản để kiểm tra trí thông minh của máy tính.",
+          "evidence": {
+            "segmentId": "T04-018",
+            "quote": "Bài đấy đơn giản: có một người — một người tester là con người — ngồi ở một phòng; bên trái là máy tính và bên phải là một người khác. Bây giờ người này đặt cùng một câu hỏi sang hai phòng đấy, và hai bên sẽ cùng trả lời người này. Nếu người này không đoán ra được bên nào là máy, bên nào là người, tức là cái máy đấy đã vượt qua bài test thành công"
+          }
+        },
+        {
+          "text": "Turing Test là một tiêu chuẩn để đánh giá khả năng của AI.",
+          "evidence": {
+            "segmentId": "T04-020",
+            "quote": "theo mọi người, có những năng lực nào mà AI đã bắt đầu tiệm cận, đạt đến mức độ mà con người không thể phân biệt được rồi?"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Được giảng viên nhắc đến như một phần của lịch sử AI",
+          "evidence": {
+            "segmentId": "T04-018",
+            "quote": "Bài đấy đơn giản: có một người — một người tester là con người — ngồi ở một phòng; bên trái là máy tính và bên phải là một người khác. Bây giờ người này đặt cùng một câu hỏi sang hai phòng đấy, và hai bên sẽ cùng trả lời người này. Nếu người này không đoán ra được bên nào là máy, bên nào là người, tức là cái máy đấy đã vượt qua bài test thành công"
+          }
+        },
+        {
+          "text": "Giảng viên đề cập đến Turing Test như một tiêu chuẩn để đánh giá khả năng của AI",
+          "evidence": {
+            "segmentId": "T04-020",
+            "quote": "theo mọi người, có những năng lực nào mà AI đã bắt đầu tiệm cận, đạt đến mức độ mà con người không thể phân biệt được rồi?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "LịchSửAI",
+      "name": "Lịch sử AI",
+      "tier": "important",
+      "short_summary": "AI đã trải qua 70 năm phát triển với nhiều thành tựu và thất bại",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "AI đã trải qua 70 năm phát triển với nhiều thành tựu và thất bại.",
+          "evidence": {
+            "segmentId": "T04-022",
+            "quote": "Thực ra nó đã có khoảng 70 năm rồi, và cái này chỉ mang tính tương đối để các bạn hình dung được thôi nhá"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên cung cấp một cái nhìn tổng quan về lịch sử phát triển của AI",
+          "evidence": {
+            "segmentId": "T04-022",
+            "quote": "Thực ra nó đã có khoảng 70 năm rồi, và cái này chỉ mang tính tương đối để các bạn hình dung được thôi nhá"
+          }
+        }
+      ]
+    },
+    {
+      "id": "AlphaGo",
+      "name": "AlphaGo",
+      "tier": "important",
+      "short_summary": "AlphaGo là một chương trình AI chơi cờ vây đã đánh bại kỳ thủ hàng đầu thế giới",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "AlphaGo là một chương trình AI chơi cờ vây đã đánh bại kỳ thủ hàng đầu thế giới.",
+          "evidence": {
+            "segmentId": "T04-034",
+            "quote": "Ở đây mọi người có ai biết AlphaGo không?"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên đề cập đến AlphaGo như một ví dụ về khả năng của AI trong việc học và chơi game",
+          "evidence": {
+            "segmentId": "T04-034",
+            "quote": "Ở đây mọi người có ai biết AlphaGo không?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Transformer",
+      "name": "Transformer",
+      "tier": "core",
+      "short_summary": "Mô hình ngôn ngữ lớn hoạt động trên nền tảng Transformer và sinh các token tiếp theo",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Transformer là một mô hình ngôn ngữ lớn có khả năng nhìn bao phủ toàn bộ cả câu để tự động detect ra được cái gì liên quan đến nhau.",
+          "evidence": {
+            "segmentId": "T04-055",
+            "quote": "chỉ có những mô hình như kiểu Transformer, có cơ chế tự động nhìn ra được các từ, có một cửa sổ rộng hơn để nhìn và nối các từ cần chú ý với nhau, thì nó mới nhìn được toàn bộ cả câu đấy."
+          }
+        },
+        {
+          "text": "Transformer áp dụng cơ chế attention để xử lý dữ liệu chuỗi.",
+          "evidence": {
+            "segmentId": "T04-094",
+            "quote": "Transformer áp dụng cơ chế attention để xử lý dữ liệu chuỗi"
+          }
+        },
+        {
+          "text": "Transformer là nền tảng cho các mô hình ngôn ngữ lớn hiện nay.",
+          "evidence": {
+            "segmentId": "T04-091",
+            "quote": "các mô hình ngôn ngữ lớn bây giờ hoạt động trên nền tảng Transformer và sinh các token tiếp theo"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên nhấn mạnh Transformer là một mô hình quan trọng trong lĩnh vực ngôn ngữ tự nhiên",
+          "evidence": {
+            "segmentId": "T04-055",
+            "quote": "chỉ có những mô hình như kiểu Transformer, có cơ chế tự động nhìn ra được các từ, có một cửa sổ rộng hơn để nhìn và nối các từ cần chú ý với nhau, thì nó mới nhìn được toàn bộ cả câu đấy."
+          }
+        },
+        {
+          "text": "Transformer dùng cơ chế lưu KV để lưu được trạng thái của các từ trước đó",
+          "evidence": {
+            "segmentId": "T04-094",
+            "quote": "Transformer áp dụng cơ chế attention để xử lý dữ liệu chuỗi"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Attention",
+      "name": "Attention",
+      "tier": "important",
+      "short_summary": "Attention là một kỹ thuật cho phép mô hình nhìn ra được nhiều quy luật khác nhau và nhìn ra được nhiều đặc trưng khác nhau trong một nội dung",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Attention là một kỹ thuật cho phép mô hình nhìn ra được nhiều quy luật khác nhau và nhìn ra được nhiều đặc trưng khác nhau trong một nội dung.",
+          "evidence": {
+            "segmentId": "T04-056",
+            "quote": "Attention như khi nãy chúng ta nhìn, đấy là một model có thể nhìn bao phủ toàn bộ cả câu để nó tự động detect ra được cái gì liên quan đến nhau."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên giải thích Attention là một kỹ thuật quan trọng trong mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-056",
+            "quote": "Attention như khi nãy chúng ta nhìn, đấy là một model có thể nhìn bao phủ toàn bộ cả câu để nó tự động detect ra được cái gì liên quan đến nhau."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ReinforcementLearning",
+      "name": "Reinforcement Learning",
+      "tier": "core",
+      "short_summary": "Reinforcement Learning là một kỹ thuật đào tạo mô hình ngôn ngữ lớn bằng cách cho nó học từ các dữ liệu và tự động điều chỉnh dựa trên kết quả",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Reinforcement Learning là một kỹ thuật đào tạo mô hình ngôn ngữ lớn bằng cách cho nó học từ các dữ liệu và tự động điều chỉnh dựa trên kết quả.",
+          "evidence": {
+            "segmentId": "T04-059",
+            "quote": "Nó sẽ dựa trên một công nghệ, một kỹ thuật là reinforcement learning với con người tham gia — viết tắt là RLHF."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên giải thích Reinforcement Learning là một kỹ thuật quan trọng trong đào tạo mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-059",
+            "quote": "Nó sẽ dựa trên một công nghệ, một kỹ thuật là reinforcement learning với con người tham gia — viết tắt là RLHF."
+          }
+        }
+      ]
+    },
+    {
+      "id": "LLM",
+      "name": "LLM (Mô hình Ngôn ngữ Lớn)",
+      "tier": "core",
+      "short_summary": "Mô hình ngôn ngữ lớn là một phần quan trọng của AI, cần được kết nối với các công cụ và dữ liệu bên ngoài để hoạt động hiệu quả",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Mô hình ngôn ngữ lớn là một phần quan trọng của AI.",
+          "evidence": {
+            "segmentId": "T04-073",
+            "quote": "Xuất phát điểm của chúng ta là từ một mô hình thôi. Bây giờ chúng ta làm cho mô hình có tay, có chân, có bộ não, có thêm nhiều ngữ cảnh khác để làm được việc — đấy là con đường đi đến AI agent."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "LLM được nhắc đến nhiều lần trong transcript như một thành phần quan trọng của AI",
+          "evidence": {
+            "segmentId": "T04-073",
+            "quote": "Xuất phát điểm của chúng ta là từ một mô hình thôi. Bây giờ chúng ta làm cho mô hình có tay, có chân, có bộ não, có thêm nhiều ngữ cảnh khác để làm được việc — đấy là con đường đi đến AI agent."
+          }
+        }
+      ]
+    },
+    {
+      "id": "Evaluation",
+      "name": "Evaluation (Đánh giá)",
+      "tier": "core",
+      "short_summary": "Đánh giá là một phần quan trọng của quá trình phát triển AI, giúp xác định hiệu suất và khả năng của mô hình",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Đánh giá là một phần quan trọng của quá trình phát triển AI.",
+          "evidence": {
+            "segmentId": "T04-075",
+            "quote": "Và quan trọng nhất — mình nghĩ quyết định đến 80%, và mình rất muốn nhắc tất cả mọi người trong khóa học này — đấy là evaluation."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Đánh giá được nhắc đến như một phần quan trọng của quá trình phát triển AI",
+          "evidence": {
+            "segmentId": "T04-075",
+            "quote": "Và quan trọng nhất — mình nghĩ quyết định đến 80%, và mình rất muốn nhắc tất cả mọi người trong khóa học này — đấy là evaluation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "MôHìnhMãNgồnMở",
+      "name": "Mô hình mã nguồn mở",
+      "tier": "important",
+      "short_summary": "Mô hình mã nguồn mở là một loại mô hình AI được phát triển bởi cộng đồng, và chúng đang trở nên phổ biến hơn",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Mô hình mã nguồn mở là một loại mô hình AI được phát triển bởi cộng đồng.",
+          "evidence": {
+            "segmentId": "T04-076",
+            "quote": "Vùng màu cam là các mô hình mã nguồn mở — thường là ở bên Trung Quốc — và làn sóng này đang càng ngày càng lớn dần, từ năm 2022 cho đến nay là năm 2026."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Mô hình mã nguồn mở được nhắc đến như một loại mô hình AI đang trở nên phổ biến hơn",
+          "evidence": {
+            "segmentId": "T04-076",
+            "quote": "Vùng màu cam là các mô hình mã nguồn mở — thường là ở bên Trung Quốc — và làn sóng này đang càng ngày càng lớn dần, từ năm 2022 cho đến nay là năm 2026."
+          }
+        }
+      ]
+    },
+    {
+      "id": "KếtNốiVớicácCôngCụBênNgoài",
+      "name": "Kết nối với các công cụ bên ngoài",
+      "tier": "supporting",
+      "short_summary": "Kết nối với các công cụ bên ngoài là cần thiết để mô hình AI hoạt động hiệu quả",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Kết nối với các công cụ bên ngoài là cần thiết để mô hình AI hoạt động hiệu quả.",
+          "evidence": {
+            "segmentId": "T04-073",
+            "quote": "Để làm được việc đấy, nó cần được gắn tay, gắn chân — kết nối với các công cụ, với thế giới bên ngoài."
+          }
+        }
+      ]
+    }
+  ]
+}

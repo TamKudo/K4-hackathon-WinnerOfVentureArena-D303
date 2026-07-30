@@ -1,0 +1,194 @@
+{
+  "model": "llama-3.3-70b-versatile",
+  "transcriptPath": "C:\\Users\\minht\\Batch03-K4-AI-Product-Hackathon-NhomA31\\data\\vlearn-pack\\transcript\\transcript-04-clean.md",
+  "segmentCount": 98,
+  "chunkSize": 18,
+  "chunkCount": 6,
+  "extractSystemPrompt": "Bạn đang giúp xây \"Review Map\" cho sản phẩm LectureFocus — bản đồ ưu tiên ôn tập dựng từ transcript bài giảng. Đây là VÒNG 1/2: bạn chỉ nhận được MỘT LÔ NHỎ các đoạn transcript (không phải toàn bộ buổi học), nhiệm vụ là rút ra các khái niệm NHÁP xuất hiện trong đúng lô này.\n\nQUY TẮC BẮT BUỘC:\n1. Mọi trích dẫn (evidence) phải trỏ về đúng một segmentId có thật trong input được cấp cho bạn ở lượt này, và \"quote\" phải là một chuỗi con chép nguyên văn (verbatim substring) từ đúng đoạn text của segmentId đó — không paraphrase, không bịa quote.\n2. Không tạo khái niệm nào không có căn cứ trực tiếp trong transcript. Không suy diễn nội dung ngoài những gì giảng viên thực sự nói.\n3. Nếu một đoạn bị đánh dấu [không nghe rõ], hoặc giảng viên tự nhận xét đoạn đó \"chỉ mang tính tương đối\"/không chắc chắn, hoặc nội dung mâu thuẫn với đoạn khác: hạ tier xuống hoặc gắn \"uncertain_signal\": true thay vì đoán liều lên core/important.\n4. Không biến các đoạn [Hoạt động lớp: ...] (ghi chú hoạt động lớp, không phải lời giảng) thành một khái niệm học thuật.\n5. Tuyệt đối không tạo quiz, không dự đoán \"phần nào sẽ thi\", không đưa ra nhận định học viên đã hiểu hay chưa hiểu phần nào.\n6. Ưu tiên tier cao hơn cho khái niệm được giảng viên nhấn mạnh rõ ràng, lặp lại nhiều lần, hoặc xuất hiện lại trong phần tóm tắt cuối buổi.\n\nNếu lô này không có nội dung kiến thức đáng ôn (toàn là chào hỏi, hoạt động lớp, giao lưu phiếm), trả về \"candidates\": [].\n\nTrả lời DUY NHẤT một JSON object, không kèm markdown code fence, không giải thích thêm:\n{\n  \"candidates\": [\n    {\n      \"name\": \"tên khái niệm nháp\",\n      \"tier_suggestion\": \"core\" | \"important\" | \"supporting\",\n      \"uncertain_signal\": boolean,\n      \"short_summary\": \"1 câu\",\n      \"evidence\": [\n        { \"segmentId\": \"Txx-NNN\", \"quote\": \"chuỗi con nguyên văn\" }\n      ],\n      \"reason\": \"vì sao gợi ý tier này, dựa evidence nào\"\n    }\n  ]\n}",
+  "consolidateSystemPrompt": "Bạn đang hoàn thiện \"Review Map\" cho LectureFocus. Đây là VÒNG 2/2: bạn nhận được danh sách khái niệm NHÁP đã được rút ra riêng lẻ từ từng lô nhỏ của transcript Day 1 — Foundation (cách LLM hoạt động). Nhiều khái niệm nháp có thể trùng nhau (cùng một ý nhưng rút từ các lô khác nhau) hoặc quá vụn vặt.\n\nNhiệm vụ:\n1. Gộp các khái niệm nháp trùng lặp/gần nghĩa thành một khái niệm duy nhất, cộng dồn toàn bộ evidence của chúng.\n2. Loại bỏ khái niệm quá nhỏ/không đáng thành một mục ôn tập riêng.\n3. Chốt tier cuối cùng (core/important/supporting) cho từng khái niệm, ưu tiên khái niệm được nhiều lô khác nhau cùng nhắc tới hoặc có evidence từ đoạn tóm tắt cuối buổi.\n4. Giữ nguyên mọi \"segmentId\" và \"quote\" đã có trong dữ liệu nháp — KHÔNG được tự bịa segmentId hay quote mới không có trong input.\n\nQUY TẮC BẮT BUỘC:\n1. Mọi trích dẫn (evidence) phải trỏ về đúng một segmentId có thật trong input được cấp cho bạn ở lượt này, và \"quote\" phải là một chuỗi con chép nguyên văn (verbatim substring) từ đúng đoạn text của segmentId đó — không paraphrase, không bịa quote.\n2. Không tạo khái niệm nào không có căn cứ trực tiếp trong transcript. Không suy diễn nội dung ngoài những gì giảng viên thực sự nói.\n3. Nếu một đoạn bị đánh dấu [không nghe rõ], hoặc giảng viên tự nhận xét đoạn đó \"chỉ mang tính tương đối\"/không chắc chắn, hoặc nội dung mâu thuẫn với đoạn khác: hạ tier xuống hoặc gắn \"uncertain_signal\": true thay vì đoán liều lên core/important.\n4. Không biến các đoạn [Hoạt động lớp: ...] (ghi chú hoạt động lớp, không phải lời giảng) thành một khái niệm học thuật.\n5. Tuyệt đối không tạo quiz, không dự đoán \"phần nào sẽ thi\", không đưa ra nhận định học viên đã hiểu hay chưa hiểu phần nào.\n6. Ưu tiên tier cao hơn cho khái niệm được giảng viên nhấn mạnh rõ ràng, lặp lại nhiều lần, hoặc xuất hiện lại trong phần tóm tắt cuối buổi.\n\nTrả lời DUY NHẤT một JSON object hợp lệ theo đúng schema sau, không kèm markdown code fence, không giải thích thêm:\n{\n  \"concepts\": [\n    {\n      \"id\": \"string ngắn gọn duy nhất\",\n      \"name\": \"tên khái niệm\",\n      \"tier\": \"core\" | \"important\" | \"supporting\",\n      \"short_summary\": \"1 câu tóm tắt\",\n      \"uncertain_signal\": boolean,\n      \"learningPoints\": [\n        { \"text\": \"1 ý cần nắm\", \"evidence\": { \"segmentId\": \"Txx-NNN\", \"quote\": \"chuỗi con nguyên văn\" } }\n      ],\n      \"reasons\": [\n        { \"text\": \"vì sao khái niệm này ở tier này\", \"evidence\": { \"segmentId\": \"Txx-NNN\", \"quote\": \"chuỗi con nguyên văn\" } }\n      ]\n    }\n  ]\n}",
+  "calls": [
+    {
+      "callLabel": "extract-chunk-1",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:45:16.206Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.050841969,
+        "prompt_tokens": 4253,
+        "prompt_time": 0.24972645,
+        "completion_tokens": 799,
+        "completion_time": 1.6254146010000001,
+        "total_tokens": 5052,
+        "total_time": 1.875141051
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-2",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:45:21.443Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.16156222,
+        "prompt_tokens": 4777,
+        "prompt_time": 0.247743479,
+        "completion_tokens": 528,
+        "completion_time": 1.811060227,
+        "total_tokens": 5305,
+        "total_time": 2.058803706
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-3",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:45:26.830Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyst9absf4ybft36sczkd385` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 8260, Requested 6391. Please try again in 13.255s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "extract-chunk-3",
+      "attempt": 2,
+      "startedAt": "2026-07-30T15:45:47.985Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.167988161,
+        "prompt_tokens": 5592,
+        "prompt_time": 0.583845148,
+        "completion_tokens": 673,
+        "completion_time": 2.065259073,
+        "total_tokens": 6265,
+        "total_time": 2.649104221
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-4",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:45:54.045Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyst9absf4ybft36sczkd385` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 9081, Requested 7231. Please try again in 21.56s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "extract-chunk-4",
+      "attempt": 2,
+      "startedAt": "2026-07-30T15:46:15.241Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyst9absf4ybft36sczkd385` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 4825, Requested 7231. Please try again in 280ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "extract-chunk-4",
+      "attempt": 3,
+      "startedAt": "2026-07-30T15:46:36.500Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.059537443,
+        "prompt_tokens": 6432,
+        "prompt_time": 0.339965243,
+        "completion_tokens": 473,
+        "completion_time": 1.792187926,
+        "total_tokens": 6905,
+        "total_time": 2.132153169
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-5",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:46:41.950Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.076890964,
+        "prompt_tokens": 4483,
+        "prompt_time": 0.441761416,
+        "completion_tokens": 732,
+        "completion_time": 2.237050284,
+        "total_tokens": 5215,
+        "total_time": 2.6788117
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-6",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:46:47.858Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyst9absf4ybft36sczkd385` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10444, Requested 1939. Please try again in 1.915s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "extract-chunk-6",
+      "attempt": 2,
+      "startedAt": "2026-07-30T15:47:08.999Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.615494759,
+        "prompt_tokens": 1466,
+        "prompt_time": 0.493736129,
+        "completion_tokens": 373,
+        "completion_time": 0.729222014,
+        "total_tokens": 1839,
+        "total_time": 1.222958143
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "consolidate",
+      "attempt": 1,
+      "startedAt": "2026-07-30T15:47:11.036Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyst9absf4ybft36sczkd385` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 7647, Requested 5051. Please try again in 3.49s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "consolidate",
+      "attempt": 2,
+      "startedAt": "2026-07-30T15:47:32.185Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.059182185,
+        "prompt_tokens": 4578,
+        "prompt_time": 0.238339022,
+        "completion_tokens": 4096,
+        "completion_time": 10.724599719,
+        "total_tokens": 8674,
+        "total_time": 10.962938741
+      },
+      "parseError": null
+    }
+  ],
+  "finalParseError": null
+}

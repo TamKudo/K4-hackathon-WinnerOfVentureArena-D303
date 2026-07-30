@@ -1,0 +1,286 @@
+{
+  "concepts": [
+    {
+      "id": "nền_tảng_ai",
+      "name": "Nền tảng của AI",
+      "tier": "core",
+      "short_summary": "Nền tảng của AI bao gồm các mô hình ngôn ngữ lớn và các công nghệ liên quan",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Nền tảng của AI bao gồm các mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-003",
+            "quote": "Ngày hôm nay chúng ta vào bài đầu tiên: học về nền tảng của AI và các mô hình ngôn ngữ lớn — LLM."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên nhấn mạnh nền tảng của AI là kiến thức nền tảng cần nắm vững",
+          "evidence": {
+            "segmentId": "T04-003",
+            "quote": "Ngày hôm nay chúng ta vào bài đầu tiên: học về nền tảng của AI và các mô hình ngôn ngữ lớn — LLM."
+          }
+        }
+      ]
+    },
+    {
+      "id": "mô_hình_ngôn_ngữ_lớn",
+      "name": "Mô hình ngôn ngữ lớn (LLM)",
+      "tier": "important",
+      "short_summary": "Mô hình ngôn ngữ lớn là một phần quan trọng của nền tảng AI",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Mô hình ngôn ngữ lớn là một phần quan trọng của nền tảng AI",
+          "evidence": {
+            "segmentId": "T04-003",
+            "quote": "Ngày hôm nay chúng ta vào bài đầu tiên: học về nền tảng của AI và các mô hình ngôn ngữ lớn — LLM."
+          }
+        },
+        {
+          "text": "Mô hình ngôn ngữ lớn được sử dụng trong nhiều ứng dụng thực tế",
+          "evidence": {
+            "segmentId": "T04-046",
+            "quote": "Bản chất các sản phẩm ChatGPT, Claude, Gemini được xây dựng dựa trên một mô hình ngôn ngữ lớn — cái gọi là trái tim, bộ não của AI."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Mô hình ngôn ngữ lớn được nhắc đến như một phần quan trọng của nền tảng AI",
+          "evidence": {
+            "segmentId": "T04-003",
+            "quote": "Ngày hôm nay chúng ta vào bài đầu tiên: học về nền tảng của AI và các mô hình ngôn ngữ lớn — LLM."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sự_khác_biệt_giữa_ai_truyền_thống_và_ai_hiện_đại",
+      "name": "Sự khác biệt giữa AI truyền thống và AI hiện đại",
+      "tier": "supporting",
+      "short_summary": "AI truyền thống và AI hiện đại có sự khác biệt về khả năng và ứng dụng",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "AI truyền thống và AI hiện đại có sự khác biệt về khả năng và ứng dụng",
+          "evidence": {
+            "segmentId": "T04-003",
+            "quote": "AI thì rất là rộng: trước khi ChatGPT ra đời, chúng ta đã có AI vài chục năm rồi, và ngày xưa đã có những mô hình AI mà bọn mình hay gọi là AI truyền thống — AI trước thời ChatGPT — đã có rất nhiều rồi."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên giải thích sự khác biệt giữa AI truyền thống và AI hiện đại",
+          "evidence": {
+            "segmentId": "T04-003",
+            "quote": "AI thì rất là rộng: trước khi ChatGPT ra đời, chúng ta đã có AI vài chục năm rồi, và ngày xưa đã có những mô hình AI mà bọn mình hay gọi là AI truyền thống — AI trước thời ChatGPT — đã có rất nhiều rồi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "lịch_sử_ai",
+      "name": "Lịch sử AI",
+      "tier": "important",
+      "short_summary": "AI đã trải qua 70 năm phát triển với hai lần mùa đông",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "AI đã trải qua 70 năm phát triển với hai lần mùa đông",
+          "evidence": {
+            "segmentId": "T04-022",
+            "quote": "AI không phải đi thẳng một phát lên đâu, mà nó đã trải qua hai lần mùa đông rồi."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên cung cấp thông tin về lịch sử phát triển của AI và các giai đoạn quan trọng",
+          "evidence": {
+            "segmentId": "T04-022",
+            "quote": "AI không phải đi thẳng một phát lên đâu, mà nó đã trải qua hai lần mùa đông rồi."
+          }
+        }
+      ]
+    },
+    {
+      "id": "deep_learning",
+      "name": "Deep learning",
+      "tier": "core",
+      "short_summary": "Deep learning là một phương pháp học máy dựa trên mạng neuron thần kinh",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Deep learning là một phương pháp học máy dựa trên mạng neuron thần kinh",
+          "evidence": {
+            "segmentId": "T04-030",
+            "quote": "Ý tưởng khiến cho máy móc có thể học được rất nhiều dữ liệu là tái tạo được mạng neuron thần kinh giống như con người — đấy là nền tảng của deep learning."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên giải thích rõ về deep learning và nó là một khái niệm quan trọng trong lĩnh vực AI",
+          "evidence": {
+            "segmentId": "T04-030",
+            "quote": "Ý tưởng khiến cho máy móc có thể học được rất nhiều dữ liệu là tái tạo được mạng neuron thần kinh giống như con người — đấy là nền tảng của deep learning."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kiến_trúc_transformer",
+      "name": "Kiến trúc Transformer",
+      "tier": "core",
+      "short_summary": "Kiến trúc Transformer là một mô hình học sâu được sử dụng trong xử lý ngôn ngữ tự nhiên",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Kiến trúc Transformer là một mô hình học sâu được sử dụng trong xử lý ngôn ngữ tự nhiên",
+          "evidence": {
+            "segmentId": "T04-038",
+            "quote": "Bài báo khởi điểm của kiến trúc đấy là 'Attention Is All You Need', xuất bản năm 2017, do team của Google làm."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Kiến trúc Transformer được nhắc đến như một thành tựu quan trọng trong lĩnh vực xử lý ngôn ngữ tự nhiên",
+          "evidence": {
+            "segmentId": "T04-038",
+            "quote": "Bài báo khởi điểm của kiến trúc đấy là 'Attention Is All You Need', xuất bản năm 2017, do team của Google làm."
+          }
+        }
+      ]
+    },
+    {
+      "id": "token",
+      "name": "Token",
+      "tier": "supporting",
+      "short_summary": "Token là một đơn vị tính trong mô hình ngôn ngữ lớn",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Token là một đơn vị tính trong mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-049",
+            "quote": "Token nghĩa là một đơn vị tính — nó không phải là từ, không phải là chữ cái, mà nó là token."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Token được nhắc đến như một khái niệm quan trọng trong mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-049",
+            "quote": "Token nghĩa là một đơn vị tính — nó không phải là từ, không phải là chữ cái, mà nó là token."
+          }
+        }
+      ]
+    },
+    {
+      "id": "context",
+      "name": "Context",
+      "tier": "supporting",
+      "short_summary": "Context là bối cảnh hoặc ngữ cảnh của một mô hình ngôn ngữ lớn",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Context là bối cảnh hoặc ngữ cảnh của một mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-051",
+            "quote": "Context nghĩa là bối cảnh, ngữ cảnh. Context ở đây nghĩa là gì? Là toàn bộ những thông tin mà một mô hình nó có thể tiêu thụ trong một lần — có thể hiểu nôm na là thế."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Context được nhắc đến như một khái niệm quan trọng trong mô hình ngôn ngữ lớn",
+          "evidence": {
+            "segmentId": "T04-051",
+            "quote": "Context nghĩa là bối cảnh, ngữ cảnh. Context ở đây nghĩa là gì? Là toàn bộ những thông tin mà một mô hình nó có thể tiêu thụ trong một lần — có thể hiểu nôm na là thế."
+          }
+        }
+      ]
+    },
+    {
+      "id": "attention",
+      "name": "Attention",
+      "tier": "core",
+      "short_summary": "Khái niệm attention trong kiến trúc Transformer giúp mô hình chú ý vào đúng những chỗ quan trọng",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Khái niệm attention trong kiến trúc Transformer giúp mô hình chú ý vào đúng những chỗ quan trọng",
+          "evidence": {
+            "segmentId": "T04-053",
+            "quote": "bản chất là để một mô hình có thể làm được việc này rất tốt, thì nó phải chú ý được đúng cái nơi nó cần chú ý"
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên nhấn mạnh tầm quan trọng của attention trong kiến trúc Transformer",
+          "evidence": {
+            "segmentId": "T04-053",
+            "quote": "bản chất là để một mô hình có thể làm được việc này rất tốt, thì nó phải chú ý được đúng cái nơi nó cần chú ý"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ai_agent",
+      "name": "AI Agent",
+      "tier": "core",
+      "short_summary": "AI agent là một mô hình có khả năng tương tác với thế giới",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "AI agent là một mô hình có khả năng tương tác với thế giới",
+          "evidence": {
+            "segmentId": "T04-073",
+            "quote": "Xuất phát điểm của chúng ta là từ một mô hình thôi. Bây giờ chúng ta làm cho mô hình có tay, có chân, có bộ não, có thêm nhiều ngữ cảnh khác để làm được việc — đấy là con đường đi đến AI agent."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên nhấn mạnh AI agent là con đường phát triển của mô hình",
+          "evidence": {
+            "segmentId": "T04-073",
+            "quote": "Xuất phát điểm của chúng ta là từ một mô hình thôi. Bây giờ chúng ta làm cho mô hình có tay, có chân, có bộ não, có thêm nhiều ngữ cảnh khác để làm được việc — đấy là con đường đi đến AI agent."
+          }
+        }
+      ]
+    },
+    {
+      "id": "evaluation",
+      "name": "Evaluation",
+      "tier": "core",
+      "short_summary": "Evaluation là quá trình đánh giá kết quả đầu ra của mô hình",
+      "uncertain_signal": false,
+      "learningPoints": [
+        {
+          "text": "Evaluation là quá trình đánh giá kết quả đầu ra của mô hình",
+          "evidence": {
+            "segmentId": "T04-075",
+            "quote": "Và quan trọng nhất — mình nghĩ quyết định đến 80%, và mình rất muốn nhắc tất cả mọi người trong khóa học này — đấy là evaluation."
+          }
+        }
+      ],
+      "reasons": [
+        {
+          "text": "Giảng viên nhấn mạnh evaluation là quan trọng nhất trong quá trình xây dựng sản phẩm",
+          "evidence": {
+            "segmentId": "T04-075",
+            "quote": "Và quan trọng nhất — mình nghĩ quyết định đến 80%, và mình rất muốn nhắc tất cả mọi người trong khóa học này — đấy là evaluation."
+          }
+        }
+      ]
+    }
+  ]
+}

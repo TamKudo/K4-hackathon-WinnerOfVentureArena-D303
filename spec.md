@@ -105,8 +105,9 @@ Golden set gồm ít nhất 20 case xây trên transcript Day 1: phần lớn l�
 | Lượt | Thời điểm | % đạt | Ghi chú |
 |---|---|---|---|
 | 0 — mock | Trước CP2 | — | Map dựng tay từ transcript, chưa gọi AI |
-| 1 | CP3 | _điền_ | Lần đo đầu với AI thật |
-| 2+ | Trước CP6 | _điền_ | Sau khi sửa prompt/quy tắc tier |
+| 1 | CP3 | 46,9% (15/32 case áp dụng được, 4/36 case chưa kích hoạt) | AI thật qua Groq (`llama-3.3-70b-versatile`, script `codebase/generate-review-map.mjs`) — **chưa đạt bar 70%**. Bỏ sót toàn bộ khối token/context/sampling, tier "core" bị lạm phát, 1 case hedge không được xử lý đúng. Chi tiết: `eval/run-1-results.md` |
+| 2 | Sau CP3, trước CP6 | 59,4% (19/32) | Sau khi chunk theo heading, giới hạn core, thêm ví dụ hedge — **vẫn chưa đạt bar 70%**. Cải thiện rõ (Attention/Transformer đúng tier core, Token/Context xuất hiện) nhưng vòng gộp (consolidate) tự ý bỏ ~15/26 khái niệm nháp hợp lệ thay vì hạ tier, và bỏ hẳn 1/4 cuối transcript. Chi tiết + chẩn đoán: `eval/run-2-results.md` |
+| 3+ | Trước CP6 | _điền_ | Cần tách vòng gộp thành các bước nhỏ hơn (hoặc gộp bằng code + AI chỉ gán tier) để hết tình trạng model tự ý bỏ sót khái niệm hợp lệ |
 
 ## §8. Phân công & kế hoạch
 
@@ -128,3 +129,4 @@ Nếu kịp giữa CP2 và CP3, nhóm thử thêm một phương án khác trên
 |---|---|---|
 | 2026-07-30 | Chốt hướng LectureFocus, khoá phạm vi không làm quiz/adaptive/backend | Bằng chứng mining cho thấy đúng nhu cầu ưu tiên hoá kiến thức, và giữ lát cắt gọn trong một quyết định AI |
 | 2026-07-30 | Tách chi tiết UI và mock data sang file riêng | Giữ spec.md gọn, đúng trọng tâm rubric |
+| 2026-07-30 | Chạy lượt AI thật đầu tiên (CP3) qua Groq API, kết quả 46,9% — chưa đạt quality bar 70% | Ghi nhận trung thực theo đúng luật hackathon; nguyên nhân đã phân tích trong `eval/run-1-results.md`, có kế hoạch sửa cụ thể cho lượt 2 |

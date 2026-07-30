@@ -1,0 +1,350 @@
+{
+  "totalCitations": 34,
+  "verifiedCitations": 30,
+  "unverified": [
+    {
+      "conceptId": "TuringTest",
+      "conceptName": "Turing Test",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-020",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "TuringTest",
+      "conceptName": "Turing Test",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-020",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "MôHìnhMãNgồnMở",
+      "conceptName": "Mô hình mã nguồn mở",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-076",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "MôHìnhMãNgồnMở",
+      "conceptName": "Mô hình mã nguồn mở",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-076",
+      "segmentExists": true,
+      "quoteVerified": false
+    }
+  ],
+  "all": [
+    {
+      "conceptId": "AI",
+      "conceptName": "Artificial Intelligence (AI)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "AI",
+      "conceptName": "Artificial Intelligence (AI)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "MachineLearning",
+      "conceptName": "Machine Learning",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "MachineLearning",
+      "conceptName": "Machine Learning",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "DeepLearning",
+      "conceptName": "Deep Learning",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "DeepLearning",
+      "conceptName": "Deep Learning",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-030",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "DeepLearning",
+      "conceptName": "Deep Learning",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "DeepLearning",
+      "conceptName": "Deep Learning",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-030",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "GenerativeAI",
+      "conceptName": "Generative AI",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "GenerativeAI",
+      "conceptName": "Generative AI",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "TuringTest",
+      "conceptName": "Turing Test",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-018",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "TuringTest",
+      "conceptName": "Turing Test",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-020",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "TuringTest",
+      "conceptName": "Turing Test",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-018",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "TuringTest",
+      "conceptName": "Turing Test",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-020",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "LịchSửAI",
+      "conceptName": "Lịch sử AI",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-022",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "LịchSửAI",
+      "conceptName": "Lịch sử AI",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-022",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "AlphaGo",
+      "conceptName": "AlphaGo",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-034",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "AlphaGo",
+      "conceptName": "AlphaGo",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-034",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Transformer",
+      "conceptName": "Transformer",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-055",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Transformer",
+      "conceptName": "Transformer",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-094",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Transformer",
+      "conceptName": "Transformer",
+      "from": "learningPoints",
+      "index": 2,
+      "segmentId": "T04-091",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Transformer",
+      "conceptName": "Transformer",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-055",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Transformer",
+      "conceptName": "Transformer",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-094",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Attention",
+      "conceptName": "Attention",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-056",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Attention",
+      "conceptName": "Attention",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-056",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "ReinforcementLearning",
+      "conceptName": "Reinforcement Learning",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-059",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "ReinforcementLearning",
+      "conceptName": "Reinforcement Learning",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-059",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "LLM",
+      "conceptName": "LLM (Mô hình Ngôn ngữ Lớn)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-073",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "LLM",
+      "conceptName": "LLM (Mô hình Ngôn ngữ Lớn)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-073",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Evaluation",
+      "conceptName": "Evaluation (Đánh giá)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-075",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "Evaluation",
+      "conceptName": "Evaluation (Đánh giá)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-075",
+      "segmentExists": true,
+      "quoteVerified": true
+    },
+    {
+      "conceptId": "MôHìnhMãNgồnMở",
+      "conceptName": "Mô hình mã nguồn mở",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-076",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "MôHìnhMãNgồnMở",
+      "conceptName": "Mô hình mã nguồn mở",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-076",
+      "segmentExists": true,
+      "quoteVerified": false
+    },
+    {
+      "conceptId": "KếtNốiVớicácCôngCụBênNgoài",
+      "conceptName": "Kết nối với các công cụ bên ngoài",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-073",
+      "segmentExists": true,
+      "quoteVerified": true
+    }
+  ]
+}
