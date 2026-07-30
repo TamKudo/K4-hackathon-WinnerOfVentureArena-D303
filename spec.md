@@ -121,6 +121,16 @@ Golden set gồm ít nhất 20 case xây trên transcript Day 1: phần lớn l�
 
 Ba willing user dự kiến: sẽ chốt tên trước CP5 (ưu tiên học viên ngoài nhóm cùng khoá). Vòng validation trước CP5 sẽ giao mỗi người một nhiệm vụ cụ thể — dùng Review Map để quyết định ôn Day 1 trong 15 phút — rồi quan sát im lặng và hỏi đúng ba câu: điều gì khó hiểu hoặc khó chịu nhất, có tin kết quả này không và vì sao, có dùng thật không và vì sao. Toàn bộ ghi lại nguyên văn trong `validation/`.
 
+**Kế hoạch sáng N2 (09:00–14:00, trước CP5):**
+
+| Việc | Ai | Khi |
+|---|---|---|
+| Chạy ≥5 phiên validation (giao task, quan sát im lặng, hỏi 3 câu, ghi log nguyên văn) | Trương Minh Tâm (dẫn phỏng vấn, đã quen mining evidence) + Phạm Hải Yến (ghi log song song, đối chiếu độc lập) | 09:00–11:30 N2 |
+| Gộp log validation, đối chiếu với quality bar §7, cập nhật changelog §9 nếu có sửa định nghĩa | Trần Minh Hiển | 11:30–12:30 N2 |
+| Dry run toàn bộ demo 5' + chuẩn bị case lỗi live | Trần Văn Toàn (chủ trì) + Trần Hoàng Khôi (vận hành UI trong lúc dry run) | 12:30–14:00 N2 |
+
+Mỗi thành viên phải giải thích được đúng phần có tên mình — CP5 kiểm ngẫu nhiên.
+
 Nếu kịp giữa CP2 và CP3, nhóm thử thêm một phương án khác trên cùng một trục thiết kế: hiển thị đủ ba tier so với chỉ hiện đúng danh sách cần ôn trong quỹ thời gian đã chọn — rồi giữ lại bằng chứng và lý do chọn phương án cuối.
 
 ## §9. Changelog
