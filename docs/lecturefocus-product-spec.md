@@ -55,9 +55,9 @@ DATA.lessons[lessonId] = {
 
 | Lesson id | Nguồn | Vai trò |
 |---|---|---|
-| `day01-foundation` | `transcript-04-clean.md` (Day 1 — Foundation) | **Trọng tâm lát cắt** — đây là bài duy nhất có golden set (`eval/golden-set.md`) và lời gọi AI thật (`codebase/generate-review-map.mjs` → `eval/run-1/`). Concepts hiện tại trong HTML vẫn là bản dựng tay (lượt 0, xem `spec.md` §7) — **chưa được thay bằng output AI thật**, việc này còn lại trước CP6. |
+| `day01-foundation` | `transcript-04-clean.md` (Day 1 — Foundation) | **Trọng tâm lát cắt** — đây là bài duy nhất có golden set (`eval/golden-set.md`) và lời gọi AI thật (`codebase/generate-review-map.mjs`). `DATA.lessons["day01-foundation"].concepts` **đã được thay bằng đúng output AI thật** ở `eval/run-2/ai-output.json` (lượt 2, 59,4% qua golden set — xem `spec.md` §7), giữ nguyên `segments` gốc. `order`/`estimated_minutes` (không có trong output AI, chỉ phục vụ UI) được gán bằng script theo tier: core=5', important=4', supporting=3'. |
 | `day02-metrics-automation` | `transcript-02-clean.md` (Day 2 — Chỉ số & tự động hoá) | Chỉ để màn Home có ≥2 thẻ bài học cho thật — thuộc non-goal "chọn nhiều bài học" đã khai trong `spec.md` §4. Không có golden set, không có kế hoạch nối AI thật. |
 
-## Việc còn thiếu để prototype hết là "Mock" đúng nghĩa lát cắt đã khai
+## Prototype hiện đã là end-to-end thật cho lát cắt chính
 
-`DATA.lessons["day01-foundation"].concepts` hiện là dữ liệu dựng tay, trong khi lời gọi AI thật đã chạy và ghi kết quả ở `eval/run-1/ai-output.json`. Hai luồng này **chưa nối vào nhau** — UI chưa đọc từ output AI. Trước CP6 cần: chạy lượt AI đạt quality bar → thay `concepts` trong `DATA.lessons["day01-foundation"]` bằng đúng output đó (giữ nguyên schema ở trên) để demo là end-to-end thật, không phải hai thứ chạy song song không liên quan.
+`DATA.lessons["day01-foundation"].concepts` không còn là dữ liệu dựng tay (lượt 0) — đã nối trực tiếp với `eval/run-2/ai-output.json` bằng `codebase/wire-ai-output-to-ui.mjs` (`node codebase/wire-ai-output-to-ui.mjs [đường dẫn ai-output.json]`, mặc định run-2). Vì quality bar (≥70%) **chưa đạt** ở lượt 2 (59,4%), UI đang hiển thị đúng kết quả thật kèm hạn chế đã ghi nhận trong `eval/run-2-results.md` (ví dụ: thiếu "Quản lý Context/temperature" ở tier phù hợp, bỏ sót 1/4 cuối transcript) — đúng luật "kết quả thấp không ảnh hưởng điểm nếu ghi nhận đầy đủ, trung thực". Nếu chạy lượt 3 trước CP6 và đạt bar cao hơn, lặp lại đúng phép nối này với `eval/run-3/ai-output.json`.
