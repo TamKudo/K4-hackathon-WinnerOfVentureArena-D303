@@ -2,4 +2,11 @@
 node_modules/
 *.env
 .env
-codebase/webapp/client/dist/
+codebase/.venv/
+**/__pycache__/
+*.local.json
+codebase/data/lecturefocus-transcripts.local.json
+codebase/web/public/data/transcripts.local.json
+codebase/web/src/data/transcripts.local.json
+codebase/web/dist/
+codebase/lecturefocus/.nicegui/
