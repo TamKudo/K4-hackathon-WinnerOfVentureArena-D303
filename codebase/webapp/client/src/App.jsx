@@ -96,7 +96,7 @@ export default function App() {
         />
       )}
 
-      {tutorOpen && <TutorModal onClose={() => setTutorOpen(false)} />}
+      {tutorOpen && <TutorModal onClose={() => setTutorOpen(false)} lesson={lesson} />}
     </div>
   );
 }

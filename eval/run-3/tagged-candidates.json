@@ -1,0 +1,422 @@
+[
+  {
+    "name": "Artificial Intelligence (AI)",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Hệ thống có trí thông minh, tái tạo và mô phỏng trí thông minh con người",
+    "evidence": [
+      {
+        "segmentId": "T04-015",
+        "quote": "AI — tắt của artificial intelligence. AI là một từ bao phủ tất cả những từ bên trong."
+      }
+    ],
+    "reason": "Được giảng viên định nghĩa rõ ràng và là nền tảng cho các khái niệm khác",
+    "sourceChunk": 1,
+    "tier": "core"
+  },
+  {
+    "name": "Machine Learning",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Thế hệ tiếp theo của AI, cho phép máy học từ dữ liệu",
+    "evidence": [
+      {
+        "segmentId": "T04-015",
+        "quote": "Vòng bên trong là machine learning — thế hệ tiếp theo: sau khi đặt ra câu hỏi đấy, họ trả lời bằng một lời giải là bây giờ tôi có thể cung cấp các dữ liệu cho máy — liệu máy có thể học được từ các dữ liệu đấy không"
+      }
+    ],
+    "reason": "Được giảng viên định nghĩa rõ ràng và là một phần quan trọng của AI",
+    "sourceChunk": 1,
+    "tier": "core"
+  },
+  {
+    "name": "Deep Learning",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Ý tưởng về việc tái tạo mạng neuron thần kinh giống như cách con người suy luận",
+    "evidence": [
+      {
+        "segmentId": "T04-015",
+        "quote": "Vòng tiếp theo bên trong là tập con nữa: deep learning. Deep learning là ý tưởng về việc liệu tôi có thể tái tạo được một mạng neuron thần kinh giống như cách con người suy luận hay không"
+      }
+    ],
+    "reason": "Được giảng viên định nghĩa rõ ràng và là một phần quan trọng của Machine Learning",
+    "sourceChunk": 1,
+    "tier": "core"
+  },
+  {
+    "name": "Generative AI",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Công nghệ AI tạo sinh, nằm đằng sau các chatbot thông minh",
+    "evidence": [
+      {
+        "segmentId": "T04-015",
+        "quote": "Và tầng bên trong cùng là tầng của generative AI — tầng con của các tầng bên ngoài. Đấy là công nghệ AI tạo sinh — tiếng Việt là AI tạo sinh — nằm đằng sau các chatbot thông minh bây giờ: ChatGPT, Claude mà mọi người đang xài"
+      }
+    ],
+    "reason": "Được giảng viên định nghĩa rõ ràng và là một phần quan trọng của Deep Learning",
+    "sourceChunk": 1,
+    "tier": "core"
+  },
+  {
+    "name": "Turing test",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Bài test kiểm tra khả năng của máy tính trong việc trả lời câu hỏi như con người",
+    "evidence": [
+      {
+        "segmentId": "T04-018",
+        "quote": "Bài đấy đơn giản: có một người — một người tester là con người — ngồi ở một phòng; bên trái là máy tính và bên phải là một người khác."
+      }
+    ],
+    "reason": "Turing test là một khái niệm quan trọng trong lịch sử AI, được giảng viên nhấn mạnh và giải thích rõ ràng.",
+    "sourceChunk": 2,
+    "tier": "core"
+  },
+  {
+    "name": "Lịch sử AI",
+    "tier_suggestion": "core",
+    "uncertain_signal": true,
+    "short_summary": "AI đã trải qua khoảng 70 năm phát triển, với hai lần mùa đông và nhiều thành tựu quan trọng",
+    "evidence": [
+      {
+        "segmentId": "T04-022",
+        "quote": "Thực ra nó đã có khoảng 70 năm rồi, và cái này chỉ mang tính tương đối để các bạn hình dung được thôi nhá — nó không thực sự chính xác, nhưng mình hình dung về cái lộ trình đi lên đi xuống thôi."
+      }
+    ],
+    "reason": "Lịch sử AI là một chủ đề quan trọng, được giảng viên trình bày và phân tích chi tiết.",
+    "sourceChunk": 2,
+    "tier": "core"
+  },
+  {
+    "name": "Deep learning",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Deep learning là một phương pháp học máy dựa trên mạng neuron thần kinh, cho phép máy tính học từ dữ liệu",
+    "evidence": [
+      {
+        "segmentId": "T04-030",
+        "quote": "Ý tưởng khiến cho máy móc có thể học được rất nhiều dữ liệu là tái tạo được mạng neuron thần kinh giống như con người — đấy là nền tảng của deep learning."
+      }
+    ],
+    "reason": "Deep learning là một khái niệm quan trọng trong lĩnh vực AI, được giảng viên giải thích và minh họa rõ ràng.",
+    "sourceChunk": 2,
+    "tier": "core"
+  },
+  {
+    "name": "Mùa đông AI",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Mùa đông AI là giai đoạn phát triển chậm của lĩnh vực AI, do thiếu dữ liệu và công nghệ",
+    "evidence": [
+      {
+        "segmentId": "T04-026",
+        "quote": "Thế nhưng sau đấy lại có những con sóng nổi lên, và những điểm nổi lên đấy cũng phải có lý do: bắt đầu có một số thành tựu nhất định, một số team kiên trì về việc đấy, thử nghiệm và thành công."
+      }
+    ],
+    "reason": "Mùa đông AI là một khái niệm quan trọng trong lịch sử AI, được giảng viên giải thích và minh họa rõ ràng.",
+    "sourceChunk": 2,
+    "tier": "important"
+  },
+  {
+    "name": "Hệ chuyên gia",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Hệ chuyên gia là một phương pháp học máy dựa trên kiến thức của chuyên gia, cho phép máy tính học từ dữ liệu",
+    "evidence": [
+      {
+        "segmentId": "T04-028",
+        "quote": "Nghĩa là lúc này tôi chia các bài toán ra thành những tác vụ đủ nhỏ trong một lĩnh vực nào đấy, và tôi chỉ xây dựng, training AI để nó làm tốt đúng việc đấy thôi, chứ tôi không cố gắng đi giải cả thế giới nữa."
+      }
+    ],
+    "reason": "Hệ chuyên gia là một khái niệm quan trọng trong lĩnh vực AI, được giảng viên giải thích và minh họa rõ ràng.",
+    "sourceChunk": 2,
+    "tier": "supporting"
+  },
+  {
+    "name": "AlphaGo",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "AlphaGo là một AI học chơi cờ vây, tạo ra cú sốc trong ngành khi thắng cờ vây.",
+    "evidence": [
+      {
+        "segmentId": "T04-035",
+        "quote": "AlphaGo là sản phẩm của một team mà sau đấy họ gia nhập Google — tiền thân của Google DeepMind."
+      }
+    ],
+    "reason": "AlphaGo được nhắc đến như một sự kiện quan trọng trong lịch sử phát triển AI, tạo ra cú sốc trong ngành.",
+    "sourceChunk": 3,
+    "tier": "core"
+  },
+  {
+    "name": "Kiến trúc Transformer",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Kiến trúc Transformer là một mô hình AI được xây dựng để xử lý ngôn ngữ tự nhiên.",
+    "evidence": [
+      {
+        "segmentId": "T04-038",
+        "quote": "Bài báo khởi điểm của kiến trúc đấy là 'Attention Is All You Need', xuất bản năm 2017, do team của Google làm."
+      }
+    ],
+    "reason": "Kiến trúc Transformer được nhắc đến như một mô hình quan trọng trong lĩnh vực AI, được xây dựng để xử lý ngôn ngữ tự nhiên.",
+    "sourceChunk": 3,
+    "tier": "core"
+  },
+  {
+    "name": "ChatGPT",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "ChatGPT là một mô hình AI được xây dựng để trả lời câu hỏi và thực hiện các nhiệm vụ ngôn ngữ tự nhiên.",
+    "evidence": [
+      {
+        "segmentId": "T04-041",
+        "quote": "Thế nhưng mà cuối cùng, cái người đầu tiên đưa nó ra được với thị trường đại chúng thì lại không phải là Google, mà là OpenAI."
+      }
+    ],
+    "reason": "ChatGPT được nhắc đến như một mô hình quan trọng trong lĩnh vực AI, được xây dựng để trả lời câu hỏi và thực hiện các nhiệm vụ ngôn ngữ tự nhiên.",
+    "sourceChunk": 3,
+    "tier": "core"
+  },
+  {
+    "name": "Cuộc đua AI",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Cuộc đua AI là một cuộc cạnh tranh giữa các công ty và tổ chức để phát triển các mô hình AI mạnh mẽ hơn.",
+    "evidence": [
+      {
+        "segmentId": "T04-043",
+        "quote": "Google thời đấy, ngay sau khi ChatGPT ra đời, ngay lập tức thành lập một team làm Google Bard — không biết thời đấy các bạn có biết Google Bard không?"
+      }
+    ],
+    "reason": "Cuộc đua AI được nhắc đến như một cuộc cạnh tranh quan trọng giữa các công ty và tổ chức để phát triển các mô hình AI mạnh mẽ hơn.",
+    "sourceChunk": 3,
+    "tier": "important"
+  },
+  {
+    "name": "Mô hình ngôn ngữ lớn",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Mô hình ngôn ngữ lớn là nền tảng của các sản phẩm AI như ChatGPT, Claude, Gemini",
+    "evidence": [
+      {
+        "segmentId": "T04-046",
+        "quote": "Bản chất các sản phẩm ChatGPT, Claude, Gemini được xây dựng dựa trên một mô hình ngôn ngữ lớn — cái gọi là trái tim, bộ não của AI."
+      }
+    ],
+    "reason": "Mô hình ngôn ngữ lớn là khái niệm trung tâm trong lĩnh vực AI, và việc hiểu rõ về nó là rất quan trọng.",
+    "sourceChunk": 4,
+    "tier": "core"
+  },
+  {
+    "name": "Dự đoán token và context",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Mô hình ngôn ngữ lớn dự đoán token và context để sinh ra văn bản",
+    "evidence": [
+      {
+        "segmentId": "T04-047",
+        "quote": "Bản chất của hệ thống Transformer, bản chất của các mô hình ngôn ngữ lớn này, đấy là nó dự đoán."
+      }
+    ],
+    "reason": "Dự đoán token và context là một phần quan trọng của mô hình ngôn ngữ lớn, giúp nó sinh ra văn bản có nghĩa.",
+    "sourceChunk": 4,
+    "tier": "important"
+  },
+  {
+    "name": "Token",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Token là đơn vị tính của mô hình ngôn ngữ lớn",
+    "evidence": [
+      {
+        "segmentId": "T04-049",
+        "quote": "Token nó sẽ là một đơn vị tính — nó không phải là từ, không phải là chữ cái, mà nó là token."
+      }
+    ],
+    "reason": "Token là một khái niệm quan trọng trong mô hình ngôn ngữ lớn, giúp hiểu rõ về cách mô hình hoạt động.",
+    "sourceChunk": 4,
+    "tier": "supporting"
+  },
+  {
+    "name": "Context",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Context là bối cảnh, ngữ cảnh của mô hình ngôn ngữ lớn",
+    "evidence": [
+      {
+        "segmentId": "T04-051",
+        "quote": "Context nghĩa là bối cảnh, ngữ cảnh."
+      }
+    ],
+    "reason": "Context là một khái niệm quan trọng trong mô hình ngôn ngữ lớn, giúp hiểu rõ về cách mô hình hoạt động.",
+    "sourceChunk": 4,
+    "tier": "supporting"
+  },
+  {
+    "name": "Attention",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Attention là cơ chế giúp mô hình ngôn ngữ lớn chú ý đến các từ quan trọng",
+    "evidence": [
+      {
+        "segmentId": "T04-054",
+        "quote": "Cái này — mình bị gen nhầm ở slide cho mọi người nhá: cái chữ T ở đây nó là chữ T của Transformer."
+      }
+    ],
+    "reason": "Attention là một cơ chế quan trọng trong mô hình ngôn ngữ lớn, giúp nó chú ý đến các từ quan trọng và sinh ra văn bản có nghĩa.",
+    "sourceChunk": 4,
+    "tier": "supporting"
+  },
+  {
+    "name": "Reinforcement Learning with Human Feedback (RLHF)",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "RLHF là kỹ thuật giúp mô hình ngôn ngữ lớn học tăng cường với sự tham gia của con người",
+    "evidence": [
+      {
+        "segmentId": "T04-059",
+        "quote": "Làm thế nào để mô hình nó thông minh hơn. Nó sẽ dựa trên một công nghệ, một kỹ thuật là reinforcement learning với con người tham gia — viết tắt là RLHF."
+      }
+    ],
+    "reason": "RLHF là một kỹ thuật quan trọng trong mô hình ngôn ngữ lớn, giúp nó học tăng cường với sự tham gia của con người.",
+    "sourceChunk": 4,
+    "tier": "supporting"
+  },
+  {
+    "name": "Thí nghiệm bàn cờ",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Thí nghiệm bàn cờ để kiểm tra khả năng học và dự đoán của mô hình AI",
+    "evidence": [
+      {
+        "segmentId": "T04-064",
+        "quote": "Để trả lời câu này thì họ có một thí nghiệm như thế này."
+      }
+    ],
+    "reason": "Thí nghiệm bàn cờ được đề cập như một ví dụ cụ thể để minh họa khả năng học và dự đoán của mô hình AI, do đó nó được coi là một khái niệm quan trọng.",
+    "sourceChunk": 5,
+    "tier": "important"
+  },
+  {
+    "name": "Mô hình ngôn ngữ lớn",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Mô hình ngôn ngữ lớn là một mô hình AI có khả năng học và dự đoán ngôn ngữ",
+    "evidence": [
+      {
+        "segmentId": "T04-067",
+        "quote": "Thế thì cái mô hình này nó có đoán được việc đấy."
+      }
+    ],
+    "reason": "Mô hình ngôn ngữ lớn được đề cập như một khái niệm trung tâm trong buổi học, và nó được minh họa qua thí nghiệm bàn cờ, do đó nó được coi là một khái niệm cốt lõi.",
+    "sourceChunk": 5,
+    "tier": "core"
+  },
+  {
+    "name": "Temperature và top-k/top-p",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Temperature và top-k/top-p là các tham số điều chỉnh khả năng dự đoán của mô hình AI",
+    "evidence": [
+      {
+        "segmentId": "T04-071",
+        "quote": "Temperature cao thì tăng độ sáng tạo đúng không?"
+      }
+    ],
+    "reason": "Temperature và top-k/top-p được đề cập như các tham số điều chỉnh khả năng dự đoán của mô hình AI, nhưng chúng không được coi là khái niệm trung tâm, do đó chúng được coi là các khái niệm hỗ trợ.",
+    "sourceChunk": 5,
+    "tier": "supporting"
+  },
+  {
+    "name": "Evaluation",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Evaluation là quá trình đánh giá hiệu suất của mô hình AI",
+    "evidence": [
+      {
+        "segmentId": "T04-075",
+        "quote": "Evaluation cực kỳ quan trọng: phần lớn các công ty bây giờ dành 80% nguồn lực của team để build hạ tầng evaluation tự động."
+      }
+    ],
+    "reason": "Evaluation được đề cập như một quá trình quan trọng trong việc đánh giá hiệu suất của mô hình AI, do đó nó được coi là một khái niệm quan trọng.",
+    "sourceChunk": 5,
+    "tier": "important"
+  },
+  {
+    "name": "Làn sóng mã nguồn mở Trung Quốc",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Làn sóng mã nguồn mở Trung Quốc là một xu hướng mới trong lĩnh vực AI",
+    "evidence": [
+      {
+        "segmentId": "T04-080",
+        "quote": "Đây là làn sóng các mô hình mã nguồn mở của Trung Quốc — đây chỉ là các mô hình nổi tiếng thôi, thực tế đang rất nhiều."
+      }
+    ],
+    "reason": "Làn sóng mã nguồn mở Trung Quốc được đề cập như một xu hướng mới trong lĩnh vực AI, nhưng nó không được coi là khái niệm trung tâm, do đó nó được coi là một khái niệm hỗ trợ.",
+    "sourceChunk": 5,
+    "tier": "supporting"
+  },
+  {
+    "name": "Benchmark năng lực và xu hướng chi phí tính toán",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Các mô hình AI đang ngày càng mạnh mẽ nhưng chi phí tính toán tăng cao",
+    "evidence": [
+      {
+        "segmentId": "T04-081",
+        "quote": "Đây là một bài test năng lực — một benchmark về software engineering."
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh về sự tăng trưởng của các mô hình AI và chi phí tính toán",
+    "sourceChunk": 6,
+    "tier": "core"
+  },
+  {
+    "name": "Mixture of Experts",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Kiến trúc Mixture of Experts giúp tiết kiệm chi phí và tăng tốc độ xử lý",
+    "evidence": [
+      {
+        "segmentId": "T04-086",
+        "quote": "Nghĩa là thay vì cứ một câu hỏi bạn phải chạy qua toàn bộ các tham số để trả lời — sẽ bị lãng phí — thì bạn tách toàn bộ thành các cụm nhỏ hơn, và tùy vào task, bạn sẽ chỉ chạy và kích hoạt một số cụm đấy thôi."
+      }
+    ],
+    "reason": "Giảng viên giải thích về kiến trúc Mixture of Experts và lợi ích của nó",
+    "sourceChunk": 6,
+    "tier": "important"
+  },
+  {
+    "name": "Cơ bản về gọi API mô hình LLM",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Gọi API mô hình LLM cần hiểu về đầu vào và đầu ra, cũng như các nguyên tắc về chi phí",
+    "evidence": [
+      {
+        "segmentId": "T04-087",
+        "quote": "Khi bạn gọi API của một mô hình LLM, luôn có đầu vào và đầu ra — có in và có out."
+      }
+    ],
+    "reason": "Giảng viên giải thích về các khái niệm cơ bản khi gọi API mô hình LLM",
+    "sourceChunk": 6,
+    "tier": "supporting"
+  },
+  {
+    "name": "Transformer",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Transformer là kiến trúc cơ bản của các mô hình ngôn ngữ lớn",
+    "evidence": [
+      {
+        "segmentId": "T04-091",
+        "quote": "Các mô hình ngôn ngữ lớn bây giờ hoạt động trên nền tảng Transformer và sinh các token tiếp theo — dự đoán các token tiếp theo."
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh về vai trò của Transformer trong các mô hình ngôn ngữ lớn",
+    "sourceChunk": 6,
+    "tier": "core"
+  }
+]

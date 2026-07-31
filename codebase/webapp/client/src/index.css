@@ -256,3 +256,135 @@ mark.quote-hl { background: #ffe58f; color: #1a1a1a; padding: 0 2px; border-radi
   max-width: 360px;
   text-align: center;
 }
+
+.tutor-modal {
+  max-width: 620px;
+  width: min(620px, calc(100vw - 24px));
+  max-height: min(86vh, 780px);
+  overflow-y: auto;
+  text-align: left;
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.tutor-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.quick-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-prompts .chip-toggle {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--bg-2);
+  color: var(--text);
+}
+
+.upload-box input {
+  font: inherit;
+}
+
+.attachment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.attachment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: var(--bg-2);
+  font-size: 13px;
+}
+
+.tutor-form {
+  display: grid;
+  gap: 12px;
+}
+
+.tutor-input {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+  resize: vertical;
+  background: var(--bg-2);
+  color: var(--text);
+}
+
+.tutor-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tutor-response {
+  margin-top: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-2);
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+  font-size: 15px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.tutor-response p {
+  margin: 8px 0 0;
+}
+
+.tutor-response h1,
+.tutor-response h2,
+.tutor-response h3 {
+  margin: 12px 0 8px;
+  color: var(--text-h);
+}
+
+.tutor-response ul,
+.tutor-response ol {
+  margin: 8px 0 8px 20px;
+  padding-left: 8px;
+}
+
+.tutor-response li {
+  margin-bottom: 6px;
+}
+
+.tutor-response code {
+  background: rgba(123, 59, 255, 0.12);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.tutor-response blockquote {
+  margin: 8px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+  color: var(--text);
+  opacity: 0.95;
+}
