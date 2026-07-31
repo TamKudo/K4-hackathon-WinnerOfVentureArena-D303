@@ -1,96 +1,78 @@
-# Mini Hackathon AI — Batch 03
+# LectureFocus — Review Map ưu tiên ôn tập
 
-**SPEC → Prototype → Demo.** Đây không phải cuộc thi code — đây là cuộc thi **tư duy sản phẩm AI**.
+**Nhóm Winner Of Venture Arena** · Zone [điền zone] · Hướng A — VLearn · Tính năng mới
 
-- Thời lượng: **1,5 ngày** (một ngày build + một buổi demo)
-- Nhóm: **4-5 người** · zone tối đa 5 nhóm · thi theo lớp
+> Học viên sau buổi học muốn ôn nhanh nhưng không biết bài có những kiến thức chính nào và phần nào nên ưu tiên. LectureFocus đọc transcript bài giảng, trích các khái niệm và xếp mức ưu tiên ôn tập **Core / Important / Supporting** kèm trích dẫn gốc trong bài giảng.
 
-## Bắt đầu từ đâu?
+## Thành viên & phân công
 
-1. Đọc **`01-de-bai.md`** để chọn hướng và hiểu tiêu chí.
-2. Mở **`02-guide.md`** — hướng dẫn từng giai đoạn, đứng ở đâu đọc mục đó.
-3. Viết spec theo **`03-template-ai-spec.md`** — deliverable trung tâm của cả sự kiện.
-4. Đọc **`04-rubric.md`** ngay từ đầu — biết trước bài được chấm theo tiêu chí nào.
+| Mã HV | Họ tên | Phụ trách phần |
+|---|---|---|
+| 2A202601812 | Trần Minh Hiển | Spec và Canvas CP1 · tổng hợp changelog |
+| 2A202602005 | Trương Minh Tâm | Mining bằng chứng chatlog · khảo sát · dẫn phỏng vấn validation |
+| 2A202601152 | Phạm Hải Yến | Prompt sinh Review Map · golden set · ghi log validation |
+| 2A202601778 | Trần Hoàng Khôi | Dựng UI ba màn (prototype mock) · vận hành UI khi dry run |
+| 2A202601218 | Trần Văn Toàn | Demo script · slide · chủ trì dry run |
 
-| File / thư mục | Nội dung |
+## Sản phẩm làm gì
+
+Một quyết định AI duy nhất: **nhận transcript → trích khái niệm → gán mức ưu tiên ôn tập, kèm trích dẫn xác minh được.**
+
+Học viên không phải biết trước mình cần hỏi gì — mở lên là thấy ngay bản đồ ba tầng, chọn quỹ thời gian (15/30/60 phút) để rút gọn danh sách.
+
+## Cấu trúc repo
+
+| Đường dẫn | Nội dung |
 |---|---|
-| `01-de-bai.md` | Đề bài 3 hướng · 5 tiêu chí nghiệm thu · ràng buộc chung |
-| `02-guide.md` | Hướng dẫn 5 giai đoạn: khám phá → spec → build → đo & validate → demo |
-| `03-template-ai-spec.md` | Template AI Spec (nộp 23:59 ngày 1) |
-| `04-rubric.md` | Rubric 100 điểm (25 nộp checkpoint + 75 chấm bài) + checklist xác minh 6 mốc |
-| `data/` | Dữ liệu thật đã ẩn danh: chatlog VLearn tutor + 6 transcript bài giảng bản sạch — dùng để tìm bằng chứng và xây golden set |
-| `tham-khao/` | JTBD Playbook (PDF) + worksheet JTBD đầy đủ — đọc khi muốn đào sâu |
+| `spec.md` | AI Spec 9 mục — deliverable trung tâm |
+| `docs/lecturefocus-product-spec.md` | Chi tiết UI, flow, mock data |
+| `codebase/lecturefocus.html` | Prototype Mock — 3 màn bấm được, dữ liệu nhúng cứng từ output AI thật |
+| `codebase/generate-review-map.mjs` | CLI chạy lượt AI thật, ghi kết quả ra `eval/run-N/` |
+| `codebase/lib/reviewMapGenerator.mjs` | Pipeline gọi Groq: prompt, gộp trùng lặp, kiểm tra trích dẫn |
+| `eval/golden-set.md` | 36 case kiểm thử tự xây |
+| `eval/run-1..5/` | Output 5 lượt chạy AI thật + trace + citation check |
+| `eval/run-*-results.md` | Bảng chấm 36 case từng lượt, đối chiếu quality bar |
+| `validation/` | Log khảo sát + feedback log từ vòng user test |
+| `reflection/` | Mỗi người 1 file |
+| `demo-slides.pdf` | Slide 6 trang |
 
-## Lịch — 6 mốc
+## Kết quả đo
 
-| Mốc | Khoá 3 | Khoá 4 |
+**Quality bar (chốt trong `spec.md` §7 trước 23:59 N1, giữ nguyên):** ≥70% case golden set đạt, và 100% case không chứa khái niệm bịa đặt hoặc tuyên bố vượt phạm vi.
+
+| Lượt | % đạt | Thay đổi chính |
 |---|---|---|
-| Khai mạc + phát đề | 09:00 ngày 1 | 14:00 ngày 1 |
-| CP1 · Chốt Canvas | 10:00 ngày 1 | 15:00 ngày 1 |
-| CP2 · Show được thứ bấm được | 12:00 ngày 1 | 17:00 ngày 1 |
-| CP3 · AI chạy thật + đo lượt đầu | 16:00 ngày 1 | 10:30 ngày 2 |
-| CP4 · Chốt tiến độ — spec nộp hạn cứng **23:59 ngày 1** | 17:30 ngày 1 | 12:00 ngày 2 |
-| CP5 · Xác minh + validation + dry run | 09:00 ngày 2 | 14:00 ngày 2 |
-| CP6 · Demo | 10:00 ngày 2 | 15:00 ngày 2 |
+| 1 | 46,9% (15/32) | Lượt đầu, chunk cố định 18 đoạn |
+| 2 | 59,4% (19/32) | Chunk theo heading, giới hạn core, thêm ví dụ hedge |
+| 3 | 48,5% (16/33) | Tách vòng gộp: AI chỉ gán tier, gộp bằng code |
+| 4 | 57,6% (19/33) | Nới điều kiện gộp — chưa có tác dụng |
+| 5 | **63,6% (21/33)** | Gộp theo tập từ lõi — hoạt động (26→21 khái niệm) |
 
-Mỗi mốc cần show gì và được xác minh thế nào: xem bảng trong `04-rubric.md`.
+**Kết quả chính thức: 63,6% — chưa đạt bar 70%**, thiếu khoảng 2 case. Ghi nhận trung thực đầy đủ mọi case kể cả case fail, kèm phân tích nguyên nhân trong `eval/run-5-results.md`.
 
-## Nộp bài
+Điều kiện tuyệt đối: nhóm ③ (ngoài phạm vi — không sinh quiz, không đoán đề thi, không phán học viên hiểu/chưa hiểu) đạt **3/3 ở cả 5 lượt**. Trích dẫn nguyên văn đạt 93,5%, chưa đủ 100%.
 
-Một repo nhóm, cấu trúc như sau. Spec chốt lúc 23:59 ngày 1; bản hoàn chỉnh trước CP6.
+## Chạy thử
 
-```
-repo/
-├── README.md          ← thành viên (mã HV + tên) + phân công có tên từng phần
-├── spec.md            ← AI Spec theo 03-template-ai-spec.md
-├── demo-slides.pdf    ← slide 6 trang theo 02-guide.md §5.1
-├── codebase/          ← prototype (ghi rõ phần nào mock)
-├── eval/              ← golden set + bảng kết quả các lượt chạy
-├── validation/        ← feedback log từ vòng user test
-└── reflection/        ← mỗi người 1 file
+**Xem prototype:** mở `codebase/lecturefocus.html` bằng trình duyệt. Không cần cài gì, không gọi mạng.
+
+**Chạy lại lượt AI thật:** cần Node.js ≥18 và API key Groq ([console.groq.com/keys](https://console.groq.com/keys)).
+
+```powershell
+# PowerShell
+$env:GROQ_API_KEY = "gsk_..."
+node codebase/generate-review-map.mjs
 ```
 
-## Chấm điểm
+```bash
+# Bash
+export GROQ_API_KEY=gsk_...
+node codebase/generate-review-map.mjs
+```
 
-Tổng **100 điểm = 25 điểm nộp checkpoint + 75 điểm chấm bài nộp**. Chi tiết từng ý điểm: `04-rubric.md`.
+Kết quả ghi ra `eval/run-N/`. Script không hardcode khái niệm hay tier nào — mỗi lượt chạy ra kết quả khác nhau. Free tier Groq giới hạn token/phút nên script tự chia lô và chờ/thử lại khi bị rate limit.
 
-**25 điểm nộp — mỗi checkpoint 5 điểm (CP1-CP5):** nộp đúng hạn → 5 điểm · nộp muộn → 0 điểm cho mốc đó. Mỗi thành viên nộp riêng, cả nhóm dùng chung một link repo.
+## Lưu ý
 
-**75 điểm chấm — trên artifact trong repo, mỗi con điểm trỏ về một file:**
-
-| Khối | Điểm | Chấm trên file nào |
-|---|---|---|
-| R1 · Bằng chứng & impact | 15 | `spec.md` §1-§2 + log khảo sát/mining |
-| R2 · Lát cắt & thiết kế | 15 | `spec.md` §4 |
-| R3 · Chỗ khó & kịch bản rủi ro | 11 | `spec.md` §5-§6 |
-| R4 · Kiểm thử | 15 | `spec.md` §7 + `eval/` |
-| R5 · Prototype chạy được | 8 | `codebase/` + demo |
-| R6 · Validation với user | 8 | `validation/` |
-| R7 · Quy trình & repo | 3 | cấu trúc repo |
-
-Ba điều nên biết trước khi làm:
-
-- Điểm dựa trên **chuỗi quyết định và bằng chứng**, không dựa trên mức độ hoành tráng của sản phẩm.
-- Kết quả đo **ghi nhận trung thực** — kể cả khi không đạt mục tiêu nhóm tự đặt — vẫn được tính đủ điểm. Số liệu bị chỉnh sửa hoặc che giấu sẽ không được tính.
-- Reflection cá nhân chấm riêng theo rubric của khoá. Điểm vòng demo, chấm chéo trong zone và thưởng thêm (nếu có) theo thể lệ công bố lúc khai mạc.
-
-## Luật chung
-
-1. Prototype có 3 mức **Sketch / Mock / Working** — mức nào cũng bắt buộc **≥1 lời gọi AI chạy thật**.
-2. **Vibe-coding rule:** dùng AI để build thoải mái, nhưng không giải thích được phần có tên mình thì phần đó 0 điểm (kiểm tra tại CP5).
-3. **Quality bar** chốt tại spec.md 23:59 ngày 1 và giữ nguyên sau đó.
-4. Chỉ dùng dữ liệu trong `data/` hoặc dữ liệu giả tự sinh — không dùng dữ liệu thật của người thật. Không commit API key.
-5. Tuân thủ **quy định bảo mật dữ liệu** bên dưới — đây là điều kiện để được cấp data.
-
-## Bảo mật dữ liệu được cung cấp
-
-Dữ liệu trong `data/` là dữ liệu thật của khoá học (đã ẩn danh), cấp riêng cho hackathon này. Khi nhận data, nhóm cam kết:
-
-1. **Chỉ dùng trong phạm vi hackathon** — cho việc tìm bằng chứng, xây golden set và build prototype. Không dùng cho mục đích khác.
-2. **Không chia sẻ ra ngoài khoá học** — không đăng lên mạng xã hội, không gửi cho người ngoài, không đưa vào bất kỳ dataset hay repo công khai nào.
-3. **Không commit data pack vào repo nộp bài** — repo nhóm chỉ chứa trích dẫn ngắn để minh hoạ (vài dòng); golden set trích từ data ghi rõ mã đoạn/mã hội thoại thay vì dán nguyên văn dài.
-4. **Cẩn trọng khi đưa data vào công cụ ngoài** — chỉ đưa phần tối thiểu cần cho việc đang làm; lưu ý API/công cụ free tier có thể dùng dữ liệu để huấn luyện (xem `02-guide.md` §3.4).
-5. **Không cố suy ngược danh tính** từ dữ liệu đã ẩn danh ([học viên], mã U/C/T/M).
-6. Sau sự kiện, **xoá các bản sao data pack** khỏi máy cá nhân và các công cụ đã upload nếu ban tổ chức yêu cầu.
-
-Vi phạm được xử lý theo quy định của khoá và có thể ảnh hưởng trực tiếp đến điểm của nhóm.
+- Dữ liệu trong `data/` là dữ liệu thật đã ẩn danh của khoá học, chỉ dùng trong phạm vi hackathon — không chia sẻ ra ngoài.
+- Không commit API key. `.env` đã nằm trong `.gitignore`.
