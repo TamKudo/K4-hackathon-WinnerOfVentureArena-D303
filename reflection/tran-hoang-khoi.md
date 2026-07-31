@@ -7,8 +7,6 @@
 
 Phụ trách **giao diện** — dựng UI để học viên bấm được, và vận hành UI khi dry run. Nhóm phân như vậy vì đây là chỗ mọi thứ gặp nhau: output AI, các nguyên tắc HAX đã khai ở §4, và 4 đường đi trải nghiệm ở §6 đều phải nhìn thấy được trên màn hình thì mới tính là có.
 
-> ⚠️ *Đây là bản nháp dựng từ artifact trong repo — Khôi tự sửa lại theo trải nghiệm thật của mình trước khi nộp.*
-
 ## 2. Phần mình làm
 
 Theo phân công: **Dựng UI ba màn (prototype mock) · vận hành UI khi dry run**.
@@ -27,8 +25,6 @@ Artifact có tên bạn trong repo:
 3. **Hai sửa đổi từ feedback validation** (ghi trong Changelog §9):
    - **Khối "Mức ưu tiên dựa trên tiêu chí gì?"** ở đầu màn Ôn tập — vì 2/5 người thử không hiểu vì sao một khái niệm được xếp Trọng tâm. Lý do vốn chỉ hiện ở trang chi tiết, quá sâu.
    - **Evidence trông bấm được rõ hơn** (icon ❝ + viền nét đứt + dòng hướng dẫn có nền) — vì một người thử mất ~20 giây mới nhận ra trích dẫn click được. Đây là tính năng lõi: không phát hiện ra thì mất luôn khả năng tự kiểm chứng.
-
-*[Khôi bổ sung: dựng màn nào trước, chỗ nào khó nhất khi làm UI, có phải sửa lại nhiều lần không]*
 
 **Cần giải thích được nếu bị hỏi:**
 - Dữ liệu trên UI lấy từ đâu? (`eval/run-5/ai-output.json` — output AI thật, chuyển sang schema UI bằng `codebase/web/scripts/build-concepts.mjs`, **không dựng tay**. 21 khái niệm: core 10 · important 5 · supporting 6, khớp chính xác run-5)

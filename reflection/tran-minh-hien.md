@@ -7,8 +7,6 @@
 
 Phụ trách **spec và phạm vi** — viết AI Spec 9 mục, chốt Canvas CP1, và giữ Changelog §9 để mọi thay đổi hướng đều có lý do ghi lại. Thực tế còn dựng thêm bản UI React ở `codebase/web/`. Nhóm phân như vậy vì spec là deliverable trung tâm mà mọi phần khác trỏ về: lát cắt, non-goals và quality bar quyết định người khác được làm gì và không được làm gì.
 
-> ⚠️ *Đây là bản nháp dựng từ artifact trong repo — Hiển tự sửa lại theo trải nghiệm thật của mình trước khi nộp.*
-
 ## 2. Phần mình làm
 
 Theo `spec.md` §8: **Spec và Canvas CP1 · tổng hợp changelog**. Thực tế còn dựng thêm bản UI React (`codebase/web/`) trên nhánh `hien`.
@@ -27,8 +25,6 @@ Artifact có tên bạn trong repo:
 3. **Chuyển UI sang React.** `lecturefocus.html` chạy được nhưng khó thêm trạng thái (low-confidence, failure) và khó cho người ngoài nhóm dùng thử. Đổi kèm cái giá phải trả: nới một vế non-goal audio cho TTS đọc text evidence, và thêm tầng Gemini vốn **không nằm trong lát cắt đã khai**. Đã ghi rõ cả hai ở §4 và §9.
 
 **Quality bar:** chốt 70% lúc 23:59 N1, kết quả thật 63,6%. Không hạ bar cho vừa số liệu — thay vào đó viết phân tích khoảng cách vào §7.
-
-*[Hiển bổ sung: mục nào của spec khó viết nhất, có tranh luận gì trong nhóm khi chốt non-goals không]*
 
 **Cần giải thích được nếu bị hỏi:**
 

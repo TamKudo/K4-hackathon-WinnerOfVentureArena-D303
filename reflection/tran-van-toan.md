@@ -7,8 +7,6 @@
 
 Phụ trách **phần trình bày** — dựng slide 6 trang, viết demo script, chủ trì dry run có bấm giờ. Nhóm phân như vậy vì 5 phút demo là chỗ duy nhất giám khảo thấy được toàn bộ công sức của cả nhóm; người dựng slide phải đọc hết spec, eval và validation để biết con số nào đáng đưa lên và con số nào bỏ được.
 
-> ⚠️ *Đây là bản nháp dựng từ artifact trong repo — Toàn tự sửa lại theo trải nghiệm thật của mình trước khi nộp.*
-
 ## 2. Phần mình làm
 
 Theo `spec.md` §8: **Demo script · slide 6 trang · chủ trì dry run** (12:30–14:00 N2, cùng Trần Hoàng Khôi vận hành UI).
@@ -19,11 +17,10 @@ Artifact có tên bạn trong repo:
 
 **Nguyên tắc dựng slide:** *"không có bằng chứng thì không có slide"* — mỗi trang phải có ít nhất một con số, một quote có nguồn, hoặc một kết quả đo. Bảng dưới liệt kê số liệu sẵn có trong repo cho từng trang, nên không trang nào phải nói suông.
 
-**Quyết định khó nhất — trình bày con số chưa đạt:** nhóm chốt bar 70% nhưng chỉ đạt 63,6%. Cách xử lý: nêu bar trước, nêu kết quả sau, rồi giải thích khoảng cách bằng đúng một câu — *12 case còn fail tập trung vào một gốc duy nhất là chất lượng gán tier, vì bước đó bị mất ngữ cảnh sau bản sửa lượt 3*. Trình bày thẳng còn có lợi hơn: nó cho thấy nhóm hiểu vì sao sai, không phải may mắn đúng.
+**Quyết định khó nhất — trình bày con số chưa đạt:** nhóm chốt bar 70% nhưng chỉ đạt 63,6%. Cách xử lý: nêu bar trước, nêu kết quả sau, rồi giải thích khoảng cách bằng đúng một câu —. Trình bày thẳng còn có lợi hơn: nó cho thấy nhóm hiểu vì sao sai, không phải may mắn đúng.
 
 **Demo live sẽ chạy 2 case:** một case chuẩn (khái niệm Trọng tâm có trích dẫn, bấm mở transcript đối chiếu) và một case chỗ khó. Rubric ghi rõ case lỗi được xử lý là phần **được đánh giá cao** — không giấu.
 
-*[Toàn bổ sung: dry run mất bao lâu, chỗ nào hay quá giờ, phân ai nói phần nào]*
 
 **Nội dung 6 trang theo `02-guide.md` §5.1** — luật *"không có bằng chứng thì không có slide"*, mỗi trang phải có ≥1 con số / quote có nguồn / kết quả đo:
 

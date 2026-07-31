@@ -7,8 +7,6 @@
 
 Phụ trách **bằng chứng** — mining chatlog để chứng minh pain có thật, chạy khảo sát 20 học viên, và dẫn phỏng vấn ở vòng validation. Nhóm phân như vậy vì cả ba việc đều là "đi hỏi người thật rồi ghi lại trung thực", và người đã quen đọc dữ liệu thô thì cũng biết chỗ nào dễ đọc sai. Ở vòng validation, tôi dẫn phỏng vấn còn Phạm Hải Yến ghi log song song để có hai bản ghi độc lập đối chiếu.
 
-> ⚠️ *Đây là bản nháp dựng từ artifact trong repo — Tâm tự sửa lại theo trải nghiệm thật của mình trước khi nộp.*
-
 ## 2. Phần mình làm
 
 Theo phân công: **Mining bằng chứng chatlog · khảo sát · dẫn phỏng vấn validation**.
@@ -25,8 +23,6 @@ Artifact có tên bạn trong repo:
 **Hai giới hạn tôi tự ghi vào spec thay vì giấu:**
 - 100% hội thoại trong chatlog thuộc `in_class`, còn JTBD nhắm vào lúc ôn **sau** buổi — hai bối cảnh khác nhau, chỉ dùng được để chứng minh nhu cầu gốc "không biết đâu là trọng tâm".
 - Trong 20 phản hồi khảo sát có 2 thành viên trong nhóm, 1 người trả lời trùng, 1 phản hồi ẩn danh sai định dạng mã HV → mẫu ngoài nhóm thật chỉ **16–17 người**, chưa đủ ngưỡng 20 của evidence chuẩn A. Không làm tròn thành "khảo sát 20 người ngoài nhóm".
-
-*[Tâm bổ sung: gặp khó gì khi lọc dữ liệu, có lần nào đếm ra số khác rồi phải kiểm lại không]*
 
 **Cần giải thích được nếu bị hỏi:**
 - Con số **142/1.261** đếm bằng cách nào? Lọc theo tiêu chí gì? Người khác lặp lại có ra cùng số không?

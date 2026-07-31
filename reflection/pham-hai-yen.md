@@ -7,8 +7,6 @@
 
 Phụ trách **chất lượng của quyết định AI** — viết prompt sinh Review Map, xây golden set 36 case, và chấm kết quả từng lượt chạy. Nhóm phân như vậy vì đây là hai việc phải đi cùng nhau: người viết prompt cũng là người định nghĩa thế nào là "đúng", nên khi kết quả sai thì biết ngay nên sửa prompt hay sửa định nghĩa case. Ở vòng validation trước CP5, ghi log song song với Trương Minh Tâm để có hai bản ghi độc lập đối chiếu.
 
-> ⚠️ *Đây là bản nháp dựng từ artifact trong repo — Yến tự sửa lại theo trải nghiệm thật của mình trước khi nộp.*
-
 ## 2. Phần mình làm
 
 Theo phân công: **Prompt sinh Review Map · golden set · ghi log validation**.
@@ -31,8 +29,6 @@ Artifact có tên bạn trong repo:
 | 5 | Gộp theo **tập từ lõi** sau khi bỏ từ chỉ loại ("cơ chế", "kiến trúc", "kỹ thuật") | "Attention" / "Multi-head Attention" / "Cơ chế attention" là ba mảnh của cùng một chủ đề nhưng nằm ở ba tier khác nhau trên UI | **63,6%** |
 
 **Golden set:** 36 case xây tay trên transcript Day 1 — 10 case thường đối chiếu bản dựng tay, 12 case cho 4 lớp chỗ khó (3 case/lớp), 4 case hiếm, 10 case bám theo câu hỏi thật trong chatlog. Mỗi case có cột "Đạt khi" viết thành quy tắc pass/fail để hai người chấm độc lập ra cùng kết quả.
-
-*[Yến bổ sung: quyết định nào khó nhất khi viết prompt, có case nào tranh cãi trong nhóm khi chấm không]*
 
 **Cần giải thích được nếu bị hỏi:**
 - Vì sao phải gọi AI **2 vòng** thay vì 1? (gợi ý: transcript ~20k token, free tier giới hạn 6-12k token/phút)

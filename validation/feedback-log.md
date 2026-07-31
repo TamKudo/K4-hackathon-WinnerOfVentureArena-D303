@@ -13,7 +13,7 @@
 | 2 | **Đoàn Tiến Thành** · 2A202601222 | "rất hữu ích, dể sử dụng, nên cải tiến ui/ux" | Góp ý chung về giao diện, không nêu chỗ cụ thể | Thấp |
 | 3 | **Hoàng Hải Dương**  2A202601337| "Tiện, cần thêm mục lục, cần quiz nhỏ, không hiểu tiêu chí trọng tâm" | **Không hiểu vì sao một khái niệm được xếp Trọng tâm** — tiêu chí tier chưa rõ với người dùng. Ngoài ra muốn mục lục và quiz | **Cao** |
 | 4 | **Đinh Quang Minh** 2A202601347 | "Tính năng hữu ích, triển khai thực tế khó, giúp hệ thống lại kiến thức và ôn tập" | Nghi ngờ tính khả thi khi triển khai thật (chi phí/quy mô), nhưng xác nhận đúng job "hệ thống lại kiến thức để ôn" | Trung bình |
-| 5 | **Chu Thị Yến Khanh** 2A202601739  · học viên AI in Action · willing user CP1: Có| Nghi ngờ tính khả thi khi triển khai thật | **Không hiểu ngay vì sao concept được xếp Trọng tâm** — trùng feedback #3. Ngoài ra mất ~20 giây mới nhận ra evidence bấm được | Trung bình |
+| 5 | **Chu Thị Yến Khanh** 2A202601739 | · học viên AI in Action · willing user CP1: Có| Nghi ngờ tính khả thi khi triển khai thật | **Không hiểu ngay vì sao concept được xếp Trọng tâm** — trùng feedback #3. Ngoài ra mất ~20 giây mới nhận ra evidence bấm được | Trung bình |
 
 **Mức nghiêm trọng:** Cao (chặn không dùng được) · Trung bình (làm được nhưng khó chịu) · Thấp (góp ý nhỏ)
 
