@@ -5,7 +5,9 @@
 
 ## 1. Vai trò trong nhóm
 
-[Điền: bạn nhận vai gì, vì sao nhóm phân như vậy]
+Phụ trách **chất lượng của quyết định AI** — viết prompt sinh Review Map, xây golden set 36 case, và chấm kết quả từng lượt chạy. Nhóm phân như vậy vì đây là hai việc phải đi cùng nhau: người viết prompt cũng là người định nghĩa thế nào là "đúng", nên khi kết quả sai thì biết ngay nên sửa prompt hay sửa định nghĩa case. Ở vòng validation trước CP5, ghi log song song với Trương Minh Tâm để có hai bản ghi độc lập đối chiếu.
+
+> ⚠️ *Đây là bản nháp dựng từ artifact trong repo — Yến tự sửa lại theo trải nghiệm thật của mình trước khi nộp.*
 
 ## 2. Phần mình làm
 
@@ -18,7 +20,19 @@ Artifact có tên bạn trong repo:
 
 **Đây là phần lõi kỹ thuật của bài — khả năng cao bị hỏi nhất.**
 
-[Điền cụ thể: bạn sửa prompt qua từng lượt thế nào, vì sao thêm quy tắc nào]
+**Prompt đã sửa qua 5 lượt, mỗi lượt vì một lý do cụ thể:**
+
+| Lượt | Sửa gì | Vì sao | Kết quả |
+|---|---|---|---|
+| 1 | Bản đầu — chunk cố định 18 đoạn | — | 46,9% |
+| 2 | Chunk theo ranh giới heading · giới hạn ~5 core · **thêm ví dụ cụ thể cho quy tắc hedge** | Lượt 1 chỉ mô tả quy tắc chung chung nên model không nhận ra câu "chỉ mang tính tương đối"; khối token/context/sampling bị xé qua 2 lô nên mất | 59,4% |
+| 3 | **Tách vòng gộp khỏi AI**: model chỉ được gán tier, cấm đổi tên/xoá/gộp; gộp + dựng schema chuyển sang code | Đọc `run-2/candidates.json` thấy vòng 1 sinh đủ 26 khái niệm nhưng vòng 2 tự ý bỏ ~15/26 dù prompt đã ghi rõ "KHÔNG được xoá" | 48,5% |
+| 4 | Nới điều kiện gộp (bỏ vế "chung segmentId") | Lượt 3 gộp được 0/26 vì điều kiện quá chặt | 57,6% |
+| 5 | Gộp theo **tập từ lõi** sau khi bỏ từ chỉ loại ("cơ chế", "kiến trúc", "kỹ thuật") | "Attention" / "Multi-head Attention" / "Cơ chế attention" là ba mảnh của cùng một chủ đề nhưng nằm ở ba tier khác nhau trên UI | **63,6%** |
+
+**Golden set:** 36 case xây tay trên transcript Day 1 — 10 case thường đối chiếu bản dựng tay, 12 case cho 4 lớp chỗ khó (3 case/lớp), 4 case hiếm, 10 case bám theo câu hỏi thật trong chatlog. Mỗi case có cột "Đạt khi" viết thành quy tắc pass/fail để hai người chấm độc lập ra cùng kết quả.
+
+*[Yến bổ sung: quyết định nào khó nhất khi viết prompt, có case nào tranh cãi trong nhóm khi chấm không]*
 
 **Cần giải thích được nếu bị hỏi:**
 - Vì sao phải gọi AI **2 vòng** thay vì 1? (gợi ý: transcript ~20k token, free tier giới hạn 6-12k token/phút)
@@ -44,4 +58,16 @@ Gợi ý — chọn một fail có thật:
 - **Lượt 4 tăng điểm nhưng không phải nhờ bản sửa**: điều kiện gộp vẫn không khớp, điểm tăng do dao động ngẫu nhiên của model (temperature 0.2). Bài học: đừng vội quy công cho bản sửa khi chưa kiểm chứng.
 - **Tier bị đảo suốt cả 5 lượt**: model luôn đẩy nội dung dễ kể chuyện (Turing test, AlphaGo) lên core và đẩy kiến thức kỹ thuật (Token) xuống supporting.
 
-[Điền: bạn chọn case nào, bạn rút ra gì, lần sau sẽ làm khác thế nào]
+**Case chọn: lượt 3 tụt 11 điểm phần trăm (59,4% → 48,5%) dù sửa đúng nguyên nhân đã chẩn đoán.**
+
+Sau lượt 2, tôi đọc `run-2/candidates.json` và xác định được chính xác chỗ hỏng: vòng 1 sinh đủ 26 khái niệm, nhưng vòng gộp bằng LLM tự ý bỏ mất ~15/26 dù prompt đã ghi rõ "KHÔNG được xoá bỏ/bỏ sót". Lượt 3 sửa đúng chỗ đó — cấm AI đụng vào danh sách, chuyển việc gộp sang code. Lỗi cũ biến mất hoàn toàn (0/26 bị mất). **Nhưng điểm lại giảm.**
+
+Lý do: bản sửa che được lỗi cũ nhưng làm lộ hai lỗi nặng hơn vốn bị lỗi kia che khuất — lạm phát core (15/26 khái niệm là core) và gộp trùng lặp thất bại hoàn toàn (26 → 26, không gộp được cặp nào).
+
+**Ba điều rút ra:**
+
+1. **Sửa đúng nguyên nhân vẫn có thể làm điểm giảm.** Một lỗi có thể đang *che* lỗi khác; gỡ nó ra thì tầng dưới lộ ra. Nếu chỉ nhìn con số mà không đọc output, tôi đã kết luận nhầm là "bản sửa sai" và quay lại cách cũ.
+2. **Mỗi lượt chỉ đổi một biến.** Từ lượt 4 tôi giữ nguyên prompt gán tier để cô lập đúng biến "gộp". Nhờ vậy mới phát hiện được điều số 3.
+3. **Đừng vội quy công cho bản sửa khi điểm tăng.** Lượt 4 tăng 9 điểm phần trăm, thoạt nhìn như bản sửa có tác dụng — nhưng kiểm lại thì điều kiện gộp vẫn không khớp cặp nào, điểm tăng do **dao động ngẫu nhiên** của model (temperature 0.2). Tôi đã ghi đúng như vậy trong `run-4-results.md` thay vì nhận là công của mình.
+
+Lần sau tôi sẽ chạy mỗi cấu hình **ít nhất 2 lần** trước khi kết luận, để phân biệt được cải thiện thật với dao động ngẫu nhiên.
