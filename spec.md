@@ -59,7 +59,7 @@ Vài câu nói nguyên văn của học viên:
 
 **Non-goals:** không làm quiz generation, chấm điểm hay adaptive learning; không xử lý ghi âm, chuyển giọng nói thành văn bản, hay đọc lại bằng giọng nói; không xây backend, database, API thật, RAG hay chatbot AI Tutor thật; không dự đoán phần nào sẽ ra thi hay tuyên bố học viên chưa hiểu phần nào; không tự suy diễn mapping giữa chatlog và transcript.
 
-**Mức prototype:** Mock. Giai đoạn đầu là ba màn hình bấm được (Lesson → Review Map → Concept Detail) chạy trên dữ liệu dựng sẵn từ transcript Day 1. Trước CP3 sẽ có ít nhất một lời gọi AI thật ở đúng quyết định trung tâm — nhận transcript, sinh ra danh sách khái niệm kèm tier, lý do và trích dẫn — rồi so kết quả với golden set. Những phần vẫn mock: chọn nhiều bài học, nút "Hỏi AI Tutor", nghe lại audio, lưu tiến độ học viên.
+**Mức prototype:** Mock. UI chạy bằng **React (Vite + Tailwind + shadcn)** theo hướng Bento Studio — flow Landing → Tổng quan → Bài học → Bản đồ ôn tập → Chi tiết khái niệm, dữ liệu dựng sẵn từ transcript Day 1/Day 2. Citation/quote nằm trong artifact nộp; transcript đầy đủ chỉ nạp local (không commit). Browser TTS đọc lại text evidence (không phải audio/timestamp giảng viên). Trước CP3 sẽ có ít nhất một lời gọi AI thật ở đúng quyết định trung tâm — nhận transcript, sinh khái niệm kèm tier, lý do và trích dẫn — rồi so với golden set. Vẫn mock: Hỏi AI về phần này, audio gốc, lưu tiến độ học viên.
 
 **Automation: augment.** Xếp nhầm một khái niệm quan trọng xuống mức phụ có thể khiến học viên bỏ sót kiến thức nền, nên hệ thống chỉ đề xuất còn học viên tự quyết định ôn gì — mỗi đề xuất đều đi kèm bằng chứng để tự kiểm tra lại, không có gì bị ẩn hay tự động chấm điểm.
 
@@ -128,3 +128,4 @@ Nếu kịp giữa CP2 và CP3, nhóm thử thêm một phương án khác trên
 |---|---|---|
 | 2026-07-30 | Chốt hướng LectureFocus, khoá phạm vi không làm quiz/adaptive/backend | Bằng chứng mining cho thấy đúng nhu cầu ưu tiên hoá kiến thức, và giữ lát cắt gọn trong một quyết định AI |
 | 2026-07-30 | Tách chi tiết UI và mock data sang file riêng | Giữ spec.md gọn, đúng trọng tâm rubric |
+| 2026-07-31 | Prototype UI chuyển sang React (Vite + Tailwind + shadcn), Bento Studio; transcript full chỉ local | UI production-grade hơn; giữ data boundary khi nộp bài |

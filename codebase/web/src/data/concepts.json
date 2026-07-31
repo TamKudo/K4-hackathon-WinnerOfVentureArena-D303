@@ -1,0 +1,1136 @@
+{
+  "lessonOrder": [
+    "day01-foundation",
+    "day02-metrics-automation"
+  ],
+  "lessons": {
+    "day01-foundation": {
+      "id": "day01-foundation",
+      "title": "Day 1 — Foundation",
+      "subtitle": "Cách LLM hoạt động",
+      "disclaimer": "Bản đồ ưu tiên ôn theo nội dung bài giảng — không phải dự đoán đề thi",
+      "transcript_source": "transcript-04-clean.md",
+      "concepts": [
+        {
+          "id": "c01",
+          "name": "LLM dự đoán token tiếp theo",
+          "tier": "core",
+          "order": 1,
+          "estimated_minutes": 5,
+          "short_summary": "LLM dự đoán token theo xác suất — văn bản trông có lý vẫn có thể sai.",
+          "narrative": [
+            [
+              {
+                "text": "Khi sinh văn bản, LLM không tra cứu một kho tri thức cố định. "
+              },
+              {
+                "text": "Nó đang dự đoán token tiếp theo trong chuỗi",
+                "evidence": {
+                  "segmentId": "T04-047",
+                  "quote": "Nó không phải là nó biết cái tri thức đấy, mà là nó đang dự đoán những từ tiếp theo, hoặc là những token",
+                  "keyPhrase": "không phải là nó biết cái tri thức"
+                }
+              },
+              {
+                "text": " — chọn từ có xác suất phù hợp với ngữ cảnh đã có, chứ không “biết” sự thật như cơ sở dữ liệu."
+              }
+            ],
+            [
+              {
+                "text": "Cơ chế vận hành là "
+              },
+              {
+                "text": "vòng lặp dự đoán → sinh → nối (append) vào chuỗi → chạy lại",
+                "evidence": {
+                  "segmentId": "T04-047",
+                  "quote": "Đấy là một vòng lặp rất cơ bản: dự đoán, sinh ra, xong append — là thêm vào chuỗi ban đầu — xong lại chạy lại",
+                  "keyPhrase": "dự đoán, sinh ra, xong append"
+                }
+              },
+              {
+                "text": ". Hệ quả quan trọng: "
+              },
+              {
+                "text": "câu chữ có thể trông rất có lý và thuận mắt nhưng vẫn sai sự thật — hiện tượng ảo giác",
+                "evidence": {
+                  "segmentId": "T04-048",
+                  "quote": "Thế nên đấy là một lý do khiến cho văn bản AI sinh ra nhìn trông rất là có lý, trông rất là thuận mắt, nhưng mà thực ra không phải thế — thực ra nó có thể sai. Đấy sẽ là hiện tượng ảo giác",
+                  "keyPhrase": "nó có thể sai"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Cuối buổi, giảng viên nhắc lại đây là điểm cần nhớ đầu tiên về cách LLM hoạt động",
+                "evidence": {
+                  "segmentId": "T04-091",
+                  "quote": "các mô hình ngôn ngữ lớn bây giờ hoạt động trên nền tảng Transformer và sinh các token tiếp theo — dự đoán các token tiếp theo",
+                  "keyPhrase": "dự đoán các token tiếp theo"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Khi ôn / dùng AI: đừng đánh giá output chỉ bằng “nghe có vẻ đúng”. Hãy đối chiếu với nguồn, test case, hoặc checklist sự thật — vì mô hình tối ưu nối từ theo xác suất, không tối ưu độ đúng tuyệt đối. "
+            },
+            {
+              "text": "Mỗi lần thấy văn bản “thuận mắt”, hãy chủ động hỏi: chỗ nào có thể sai?",
+              "evidence": {
+                "segmentId": "T04-048",
+                "quote": "Thế nên đấy là một lý do khiến cho văn bản AI sinh ra nhìn trông rất là có lý, trông rất là thuận mắt, nhưng mà thực ra không phải thế — thực ra nó có thể sai. Đấy sẽ là hiện tượng ảo giác",
+                "keyPhrase": "nó có thể sai"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Giảng viên dành cả mục mổ xẻ mô hình để giải thích cơ chế dự đoán token",
+              "evidence": {
+                "segmentId": "T04-047",
+                "quote": "Bản chất của hệ thống Transformer, bản chất của các mô hình ngôn ngữ lớn này, đấy là nó dự đoán",
+                "keyPhrase": "đấy là nó dự đoán"
+              }
+            },
+            {
+              "text": "Được nhắc lại trong tóm tắt cuối buổi như điểm cần nhớ đầu tiên",
+              "evidence": {
+                "segmentId": "T04-091",
+                "quote": "mọi người cần nhớ: thứ nhất, các mô hình ngôn ngữ lớn bây giờ hoạt động trên nền tảng Transformer và sinh các token tiếp theo",
+                "keyPhrase": "mọi người cần nhớ: thứ nhất"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c02",
+          "name": "Attention trong Transformer",
+          "tier": "core",
+          "order": 2,
+          "estimated_minutes": 5,
+          "short_summary": "Attention giúp mô hình nhìn cả câu và tập trung vào từ quan trọng, thay vì đọc từng chữ như RNN.",
+          "narrative": [
+            [
+              {
+                "text": "Trước Transformer, dịch máy kiểu RNN "
+              },
+              {
+                "text": "đọc từng chữ nối tiếp nên câu dài dễ quên phần đầu",
+                "evidence": {
+                  "segmentId": "T04-039",
+                  "quote": "khi đến câu rất dài thì nó sẽ quên những cái ở đầu — nó xử lý từng chữ một",
+                  "keyPhrase": "quên những cái ở đầu"
+                }
+              },
+              {
+                "text": ". Attention đổi cách nhìn: "
+              },
+              {
+                "text": "mô hình đọc cả cụm, nhận diện keyword và mối liên hệ giữa các từ",
+                "evidence": {
+                  "segmentId": "T04-040",
+                  "quote": "thay vì lần lượt đọc và dịch từng chữ một, nó sẽ đọc cả cụm đấy, và nhận diện được đâu là — hiểu nôm na — những keyword, đâu là những cụm từ có sự liên quan đến nhau",
+                  "keyPhrase": "cụm từ có sự liên quan đến nhau"
+                }
+              },
+              {
+                "text": ", "
+              },
+              {
+                "text": "nhìn cả đoạn dài để tìm liên hệ thay vì chỉ nhìn từng phần nhỏ",
+                "evidence": {
+                  "segmentId": "T04-040",
+                  "quote": "nó sẽ nhìn cả một đoạn dài và tìm ra các mối liên hệ giữa các từ ở trong đấy",
+                  "keyPhrase": "mối liên hệ giữa các từ"
+                }
+              },
+              {
+                "text": "."
+              }
+            ],
+            [
+              {
+                "text": "Nền tảng lịch sử: "
+              },
+              {
+                "text": "bài báo Attention Is All You Need (2017)",
+                "evidence": {
+                  "segmentId": "T04-038",
+                  "quote": "đến năm 2017 là bài báo rất nổi tiếng — \"Attention Is All You Need\"",
+                  "keyPhrase": "Attention Is All You Need"
+                }
+              },
+              {
+                "text": " mở ra kiến trúc Transformer — đây là lý do chữ “attention” xuất hiện trong tên bài báo và trong buổi Foundation."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Khi hình dung “AI hiểu câu”, hãy nhớ: không phải đọc tuần tự như người đọc từng chữ, mà là cơ chế phân bổ sự chú ý trên cả ngữ cảnh. "
+            },
+            {
+              "text": "Ôn bằng cách so sánh RNN quên đầu câu với attention nhìn cả cụm — đó là điểm khác biệt then chốt cần nắm trước khi đi sâu Transformer.",
+              "evidence": {
+                "segmentId": "T04-039",
+                "quote": "khi đến câu rất dài thì nó sẽ quên những cái ở đầu — nó xử lý từng chữ một",
+                "keyPhrase": "quên những cái ở đầu"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Có so sánh trực tiếp với RNN / dịch máy cũ",
+              "evidence": {
+                "segmentId": "T04-039",
+                "quote": "đấy là dịch máy — recurrent neural network (RNN). Cách nó làm là nó đọc từng chữ một",
+                "keyPhrase": "recurrent neural network (RNN)"
+              }
+            },
+            {
+              "text": "Được nhắc như khái niệm then chốt của Transformer trong buổi Foundation",
+              "evidence": {
+                "segmentId": "T04-040",
+                "quote": "tại sao lại có chữ attention trong \"Attention Is All You Need\" ở đây",
+                "keyPhrase": "chữ attention"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c03",
+          "name": "Token và context window",
+          "tier": "core",
+          "order": 3,
+          "estimated_minutes": 5,
+          "short_summary": "Token là đơn vị tính của LLM; context window là lượng thông tin mô hình tiêu thụ được trong một lần.",
+          "narrative": [
+            [
+              {
+                "text": ""
+              },
+              {
+                "text": "Token là đơn vị tính của LLM — không phải từ hay chữ cái nguyên vẹn",
+                "evidence": {
+                  "segmentId": "T04-049",
+                  "quote": "có một thuật ngữ quan trọng chúng ta cần nắm được, đấy là token. Nó sẽ là một đơn vị tính — nó không phải là từ, không phải là chữ cái, mà nó là token",
+                  "keyPhrase": "không phải là từ, không phải là chữ cái"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Tiếng Việt thường tốn nhiều token hơn tiếng Anh vì dấu",
+                "evidence": {
+                  "segmentId": "T04-049",
+                  "quote": "tiếng Việt thì sẽ tốn hơn tiếng Anh, bởi vì tiếng Việt nó có dấu",
+                  "keyPhrase": "tốn hơn tiếng Anh"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Context window là toàn bộ thông tin mô hình tiêu thụ được trong một lần gọi",
+                "evidence": {
+                  "segmentId": "T04-051",
+                  "quote": "Là toàn bộ những thông tin mà một mô hình nó có thể tiêu thụ trong một lần",
+                  "keyPhrase": "tiêu thụ trong một lần"
+                }
+              },
+              {
+                "text": "."
+              }
+            ],
+            [
+              {
+                "text": "Hai khái niệm này gắn trực tiếp với chi phí API và giới hạn ngữ cảnh: hiểu token giúp ước lượng “đoạn này tốn bao nhiêu”, hiểu context window giúp biết "
+              },
+              {
+                "text": "lúc nào nên đưa cái gì cho AI",
+                "evidence": {
+                  "segmentId": "T04-053",
+                  "quote": "chúng ta cần biết được là lúc nào nên đưa cái gì cho AI",
+                  "keyPhrase": "lúc nào nên đưa cái gì cho AI"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Thực hành: trước khi nhồi cả tài liệu vào prompt, ước lượng độ dài theo token và hỏi “thông tin nào thực sự cần cho lần gọi này?”. "
+            },
+            {
+              "text": "Cửa sổ càng lớn không tự động tốt hơn — phải biết lúc nào đưa gì.",
+              "evidence": {
+                "segmentId": "T04-053",
+                "quote": "chúng ta cần biết được là lúc nào nên đưa cái gì cho AI",
+                "keyPhrase": "lúc nào nên đưa cái gì cho AI"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Được gọi thẳng là thuật ngữ quan trọng cần nắm",
+              "evidence": {
+                "segmentId": "T04-049",
+                "quote": "có một thuật ngữ quan trọng chúng ta cần nắm được, đấy là token",
+                "keyPhrase": "thuật ngữ quan trọng"
+              }
+            },
+            {
+              "text": "Gắn với lab gọi API / tính chi phí token ngày hôm sau",
+              "evidence": {
+                "segmentId": "T04-050",
+                "quote": "Khi các bạn gọi API — ngày mai các bạn sẽ có bài tập đấy — chúng ta sẽ gọi ra và biết được là với đoạn văn bản đấy mất bao nhiêu token",
+                "keyPhrase": "mất bao nhiêu token"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c04",
+          "name": "Quản lý context khi dùng AI",
+          "tier": "important",
+          "order": 1,
+          "estimated_minutes": 5,
+          "short_summary": "Không phải context càng lớn càng tốt — cần đưa đúng thông tin quan trọng cho mô hình.",
+          "narrative": [
+            [
+              {
+                "text": "Quản lý context không phải cuộc đua “nhét càng nhiều càng tốt”. "
+              },
+              {
+                "text": "Khi đưa hàng trăm nghìn / triệu token ngữ cảnh, mô hình có thể chú ý sai chỗ",
+                "evidence": {
+                  "segmentId": "T04-053",
+                  "quote": "Khi bạn đưa cho nó 1 triệu token ngữ cảnh, nó có thể là chú ý sai chỗ",
+                  "keyPhrase": "chú ý sai chỗ"
+                }
+              },
+              {
+                "text": " nếu thông tin kém chất lượng hoặc không gắn với việc đang làm. "
+              },
+              {
+                "text": "Kỹ năng then chốt là quản lý cửa sổ ngữ cảnh — biết lúc nào nên đưa cái gì cho AI",
+                "evidence": {
+                  "segmentId": "T04-053",
+                  "quote": "việc quản lý cái cửa sổ ngữ cảnh này rất là quan trọng: chúng ta cần biết được là lúc nào nên đưa cái gì cho AI",
+                  "keyPhrase": "quản lý cái cửa sổ ngữ cảnh"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "“Hợp lý” ở đây nghĩa là: đưa đúng quyết định, ràng buộc, và dữ liệu then chốt; cắt phần nhiễu; và "
+            },
+            {
+              "text": "chủ động ghi lại các bước/quyết định quan trọng thay vì để model tự tóm tắt khi tràn context",
+              "evidence": {
+                "segmentId": "T04-057",
+                "quote": "bạn hãy chủ động cho việc giao cho agent, hoặc viết những cái skill, để agent trong quá trình nó làm việc nó tự động ghi lại từng bước một",
+                "keyPhrase": "tự động ghi lại từng bước một"
+              }
+            },
+            {
+              "text": ". Checklist nhanh: (1) mục tiêu lần gọi, (2) 3–5 sự kiện bắt buộc, (3) bỏ phần lịch sử không còn liên quan."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Giảng viên gọi đây là bài học rất quan trọng khi làm việc với AI / vibe code",
+              "evidence": {
+                "segmentId": "T04-057",
+                "quote": "mình rút ra một cái mình nghĩ rất là quan trọng cho tất cả chúng ta khi chúng ta sẽ cần làm việc với AI rất nhiều trong giai đoạn tới, đặc biệt là vibe code",
+                "keyPhrase": "rất là quan trọng"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c05",
+          "name": "Temperature và top-k / top-p",
+          "tier": "important",
+          "order": 2,
+          "estimated_minutes": 4,
+          "short_summary": "Top-k/top-p khoanh vùng ứng viên token; temperature điều chỉnh độ ngẫu nhiên trong phạm vi đó.",
+          "narrative": [
+            [
+              {
+                "text": "Temperature = 0 khiến mô hình gần như luôn lấy xác suất cao nhất",
+                "evidence": {
+                  "segmentId": "T04-072",
+                  "quote": "nếu temperature bằng 0, mô hình sẽ luôn luôn lấy xác suất cao nhất",
+                  "keyPhrase": "temperature bằng 0"
+                }
+              },
+              {
+                "text": ", nên đầu ra ổn định giữa các lần chạy. "
+              },
+              {
+                "text": "Top-k / top-p khoanh vùng các ứng viên token được phép chọn; temperature là độ ngẫu nhiên trong phạm vi đó",
+                "evidence": {
+                  "segmentId": "T04-072",
+                  "quote": "top-k/top-p là để trả lời câu hỏi: trong cả hàng nghìn, hàng triệu xác suất có thể lấy được, tôi sẽ khoanh vùng để lấy trong bao nhiêu",
+                  "keyPhrase": "khoanh vùng"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Khi gọi API: cần câu trả lời ổn định (phân loại, extract) → hạ temperature; cần đa dạng ý tưởng → tăng nhẹ trong phạm vi top-p/top-k đã khoanh. "
+            },
+            {
+              "text": "Hiểu ý nghĩa các chỉ số trước khi chỉnh “cho vui” — đặc biệt khi demo hoặc chấm chất lượng.",
+              "evidence": {
+                "segmentId": "T04-072",
+                "quote": "top-k/top-p là để trả lời câu hỏi: trong cả hàng nghìn, hàng triệu xác suất có thể lấy được, tôi sẽ khoanh vùng để lấy trong bao nhiêu",
+                "keyPhrase": "khoanh vùng"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Được giảng kèm ý nghĩa thực dụng khi gọi API",
+              "evidence": {
+                "segmentId": "T04-072",
+                "quote": "Đấy là ý nghĩa của các chỉ số này — đặc biệt khi các bạn gọi API thì cần hiểu ý nghĩa của chúng",
+                "keyPhrase": "khi các bạn gọi API"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c06",
+          "name": "Evaluation khi build sản phẩm AI",
+          "tier": "important",
+          "order": 3,
+          "estimated_minutes": 4,
+          "short_summary": "Evaluation có thể quyết định phần lớn thành công khi đưa sản phẩm AI ra đời thật.",
+          "narrative": [
+            [
+              {
+                "text": "Evaluation có thể quyết định phần lớn (~80%) thành công khi đưa sản phẩm AI ra đời thật",
+                "evidence": {
+                  "segmentId": "T04-075",
+                  "quote": "đấy là evaluation. Bạn làm tốt việc này thì nó quyết định đến 80% thành công sản phẩm của các bạn",
+                  "keyPhrase": "80% thành công"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Cần bộ dataset benchmark / đánh giá lặp lại được để biết hệ thống tốt hơn hay kém hơn sau mỗi thay đổi",
+                "evidence": {
+                  "segmentId": "T04-075",
+                  "quote": "bạn phải build một bộ dataset benchmark — một bộ đánh giá để biết hệ thống hoạt động tốt hay không",
+                  "keyPhrase": "dataset benchmark"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Mindset evaluation được nhắc lại ở cuối buổi như điều cần giữ khi build",
+                "evidence": {
+                  "segmentId": "T04-091",
+                  "quote": "tư duy đánh giá kết quả đầu ra — mindset về evaluation — theo mình rất quan trọng",
+                  "keyPhrase": "mindset về evaluation"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Đừng chỉ “chạy thử vài câu rồi thấy ổn”. Hãy có bộ case cố định (happy path + lỗi hay gặp + edge case), chạy lại sau mỗi lần đổi prompt/model, và ghi nhận pass/fail. "
+            },
+            {
+              "text": "Đo được thì mới cải thiện được — đó là ý “quan trọng nhất” giảng viên nhấn.",
+              "evidence": {
+                "segmentId": "T04-075",
+                "quote": "đấy là evaluation. Bạn làm tốt việc này thì nó quyết định đến 80% thành công sản phẩm của các bạn",
+                "keyPhrase": "80% thành công"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Giảng viên dùng ngôn ngữ nhấn mạnh rất mạnh (quan trọng nhất / ~80%)",
+              "evidence": {
+                "segmentId": "T04-075",
+                "quote": "quan trọng nhất — mình nghĩ quyết định đến 80%",
+                "keyPhrase": "quan trọng nhất"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c07",
+          "name": "Bức tranh AI ⊃ ML ⊃ Deep Learning ⊃ GenAI",
+          "tier": "supporting",
+          "order": 1,
+          "estimated_minutes": 3,
+          "short_summary": "Khung thuật ngữ mở đầu: generative AI nằm trong các vòng rộng hơn của AI.",
+          "narrative": [
+            [
+              {
+                "text": "Buổi học mở bằng bức tranh thuật ngữ: "
+              },
+              {
+                "text": "AI bao ngoài → machine learning → deep learning → generative AI ở tầng trong cùng",
+                "evidence": {
+                  "segmentId": "T04-015",
+                  "quote": "Vòng bên trong là machine learning — thế hệ tiếp theo",
+                  "keyPhrase": "machine learning"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "ChatGPT/Claude thuộc tầng tạo sinh, không phải toàn bộ AI",
+                "evidence": {
+                  "segmentId": "T04-015",
+                  "quote": "tầng của generative AI — tầng con của các tầng bên ngoài. Đấy là công nghệ AI tạo sinh",
+                  "keyPhrase": "generative AI"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Khi nghe “làm AI”, hãy định vị đang nói tầng nào: rule/ML cổ điển, deep learning, hay generative. Tránh nhầm chatbot với mọi bài toán AI."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Xuất hiện sớm để định vị thuật ngữ chung cho cả buổi",
+              "evidence": {
+                "segmentId": "T04-013",
+                "quote": "Đầu tiên mình đi một vòng nhìn về bức tranh AI, định nghĩa một số thuật ngữ với nhau",
+                "keyPhrase": "bức tranh AI"
+              }
+            }
+          ]
+        },
+        {
+          "id": "c08",
+          "name": "Lịch sử AI: mùa đông và deep learning",
+          "tier": "supporting",
+          "order": 2,
+          "estimated_minutes": 4,
+          "short_summary": "Bối cảnh vì sao cách tiếp cận cũ chạm trần và dữ liệu/deep learning trở thành bước ngoặt.",
+          "narrative": [
+            [
+              {
+                "text": "AI không đi thẳng lên — đã trải qua các “mùa đông” khi thiếu dữ liệu/phần cứng và mất niềm tin",
+                "evidence": {
+                  "segmentId": "T04-022",
+                  "quote": "AI không phải đi thẳng một phát lên đâu, mà nó đã trải qua hai lần mùa đông rồi",
+                  "keyPhrase": "hai lần mùa đông"
+                }
+              },
+              {
+                "text": ". Phần lịch sử giúp hiểu vì sao dữ liệu lớn và deep learning trở thành bước ngoặt."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Đọc phần này như ngữ cảnh: một số minh họa "
+            },
+            {
+              "text": "chỉ mang tính tương đối để hình dung, không phải timeline tuyệt đối",
+              "evidence": {
+                "segmentId": "T04-022",
+                "quote": "cái này chỉ mang tính tương đối để các bạn hình dung được thôi nhá — nó không thực sự chính xác",
+                "keyPhrase": "mang tính tương đối"
+              }
+            },
+            {
+              "text": ". Không cần thuộc năm tháng; cần nhớ động lực “thiếu dữ liệu / thiếu tin” từng làm chậm tiến trình."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Mang tính nền tảng/ngữ cảnh đầu buổi; giảng viên nói một số phần mang tính tương đối để hình dung",
+              "evidence": {
+                "segmentId": "T04-022",
+                "quote": "cái này chỉ mang tính tương đối để các bạn hình dung được thôi nhá — nó không thực sự chính xác",
+                "keyPhrase": "mang tính tương đối"
+              }
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "total": 8,
+        "core": 3,
+        "important": 3,
+        "supporting": 2
+      },
+      "segments": []
+    },
+    "day02-metrics-automation": {
+      "id": "day02-metrics-automation",
+      "title": "Day 2 — Chỉ số & tự động hoá",
+      "subtitle": "Chỉ số thành công và mức tự động hoá",
+      "disclaimer": "Bản đồ ưu tiên ôn theo nội dung bài giảng — không phải dự đoán đề thi",
+      "transcript_source": "transcript-02-clean.md",
+      "concepts": [
+        {
+          "id": "d2-c01",
+          "name": "Quick win trên ma trận impact–effort",
+          "tier": "core",
+          "order": 1,
+          "estimated_minutes": 5,
+          "short_summary": "Trong nhiều việc, hãy chọn quick win — impact cao, xác suất thành công cao — để ưu tiên làm trước.",
+          "narrative": [
+            [
+              {
+                "text": "Khi có nhiều đề bài/công việc, câu hỏi đầu không phải “làm hết”, mà "
+              },
+              {
+                "text": "việc nào đáng làm trước",
+                "evidence": {
+                  "segmentId": "T02-010",
+                  "quote": "Bài tập ngắn này để mọi người thử việc phân loại, tìm ra cái việc đáng để làm trước",
+                  "keyPhrase": "việc đáng để làm trước"
+                }
+              },
+              {
+                "text": ". Cách làm: "
+              },
+              {
+                "text": "lập list, đưa qua ma trận tác động–nỗ lực, rồi đánh giá và đặt ưu tiên",
+                "evidence": {
+                  "segmentId": "T02-013",
+                  "quote": "xây dựng một cái list, phân loại nó qua ma trận tác động và nỗ lực, sau đấy đánh giá và đặt ưu tiên",
+                  "keyPhrase": "ma trận tác động và nỗ lực"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Quick win (impact cao, xác suất thành công cao) rất quan trọng vì tạo thành công nhỏ và động lực",
+                "evidence": {
+                  "segmentId": "T02-010",
+                  "quote": "tìm ra quick win — quick win rất quan trọng. Làm gì cũng thế, có một thành công nhỏ sẽ khiến chúng ta có nhiều động lực hơn để làm tiếp",
+                  "keyPhrase": "quick win rất quan trọng"
+                }
+              },
+              {
+                "text": "."
+              }
+            ],
+            [
+              {
+                "text": "Trong một dự án lớn, "
+              },
+              {
+                "text": "có thể chia nhỏ thành các bước rồi đặt từng bước lên ma trận",
+                "evidence": {
+                  "segmentId": "T02-013",
+                  "quote": "trong một dự án bạn có thể chia nhỏ đến các bước được",
+                  "keyPhrase": "chia nhỏ đến các bước"
+                }
+              },
+              {
+                "text": " để chọn scope đầu tiên thay vì ôm cả hệ thống."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Thực hành 15 phút: liệt kê 5 việc → đánh impact/effort thô → chọn 1 quick win làm trước. "
+            },
+            {
+              "text": "Framework này áp dụng được cả ngoài lớp, sang bối cảnh doanh nghiệp.",
+              "evidence": {
+                "segmentId": "T02-011",
+                "quote": "trong một bối cảnh rộng hơn, bạn hoàn toàn có thể áp dụng framework đơn giản như vậy cho tất cả các công việc khác",
+                "keyPhrase": "áp dụng framework"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Giảng viên gọi tìm quick win là việc quan trọng nhất trong loạt đề bài",
+              "evidence": {
+                "segmentId": "T02-010",
+                "quote": "việc quan trọng nhất là: trong một loạt đề bài, mình hãy cố gắng tìm ra quick win",
+                "keyPhrase": "việc quan trọng nhất"
+              }
+            },
+            {
+              "text": "Framework mở rộng được sang bối cảnh doanh nghiệp",
+              "evidence": {
+                "segmentId": "T02-011",
+                "quote": "trong một bối cảnh rộng hơn, bạn hoàn toàn có thể áp dụng framework đơn giản như vậy cho tất cả các công việc khác",
+                "keyPhrase": "áp dụng framework"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c02",
+          "name": "Phát biểu bài toán: đối tượng, quy trình, nút thắt, chỉ số thành công",
+          "tier": "core",
+          "order": 2,
+          "estimated_minutes": 5,
+          "short_summary": "Trước khi chọn AI, viết rõ đối tượng, quy trình hiện tại, nút thắt và thế nào là thành công.",
+          "narrative": [
+            [
+              {
+                "text": "Trước khi chọn AI, phải phát biểu bài toán rõ: "
+              },
+              {
+                "text": "đối tượng là ai, quy trình hiện tại ra sao, nút thắt ở đâu, và thế nào là thành công",
+                "evidence": {
+                  "segmentId": "T02-015",
+                  "quote": "đối tượng là ai — trong trường hợp vừa rồi chính là các bạn. Quy trình hiện tại",
+                  "keyPhrase": "đối tượng là ai"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Chỉ số thành công nên cụ thể — ví dụ từ 30 phút xuống còn khoảng 5 phút",
+                "evidence": {
+                  "segmentId": "T02-015",
+                  "quote": "nếu tôi giải quyết được việc tóm tắt các văn bản tài liệu mỗi ngày thì tôi tiết kiệm được 30 phút một ngày — hiện tại tôi đang mất 30 phút, bây giờ làm việc đấy tôi sẽ chỉ còn mất 5 phút để đọc thôi",
+                  "keyPhrase": "chỉ còn mất 5 phút"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Quy trình đặc thù của chuyên môn chính là chỗ tạo khác biệt cho giải pháp",
+                "evidence": {
+                  "segmentId": "T02-017",
+                  "quote": "sự khác biệt của giải pháp của các bạn là do cái quy trình này mà các bạn cần phải viết ra",
+                  "keyPhrase": "sự khác biệt của giải pháp"
+                }
+              },
+              {
+                "text": "."
+              }
+            ],
+            [
+              {
+                "text": "Cuối buổi, checklist được nhắc lại: đối tượng, workflow, chỗ tắc, tác động, chỉ số thành công",
+                "evidence": {
+                  "segmentId": "T02-042",
+                  "quote": "đối tượng ảnh hưởng; rồi workflow — workflow là một thứ rất quan trọng cần được viết; họ đang bị tắc ở đâu",
+                  "keyPhrase": "workflow là một thứ rất quan trọng"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Mẫu điền nhanh: “Ai bị ảnh hưởng? Họ đang làm bước nào? Tắc ở đâu? Xong thì số nào đổi?”. Nếu chưa viết được workflow và chỉ số, "
+            },
+            {
+              "text": "chưa đủ cơ sở để quyết định đưa AI vào",
+              "evidence": {
+                "segmentId": "T02-015",
+                "quote": "đối tượng là ai — trong trường hợp vừa rồi chính là các bạn. Quy trình hiện tại",
+                "keyPhrase": "đối tượng là ai"
+              }
+            },
+            {
+              "text": "."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Được giảng như khung bắt buộc khi viết bài toán đầu tiên",
+              "evidence": {
+                "segmentId": "T02-015",
+                "quote": "Đây là một ví dụ về cái khung để viết một phát biểu vấn đề — bài toán đầu tiên",
+                "keyPhrase": "phát biểu vấn đề"
+              }
+            },
+            {
+              "text": "Được nhắc lại ở cuối buổi như checklist viết phát biểu bài toán",
+              "evidence": {
+                "segmentId": "T02-042",
+                "quote": "khi chúng ta viết một phát biểu bài toán cho sản phẩm, chúng ta sẽ cần viết ra những yếu tố như thế này",
+                "keyPhrase": "phát biểu bài toán cho sản phẩm"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c03",
+          "name": "Automation vs Augmentation",
+          "tier": "core",
+          "order": 3,
+          "estimated_minutes": 5,
+          "short_summary": "Chọn mức tự động hoá theo phổ: bắt đầu augmentation, tăng dần automation khi đủ an toàn.",
+          "narrative": [
+            [
+              {
+                "text": "Automation = máy làm thay; augmentation = AI tăng cường, người vẫn tham gia",
+                "evidence": {
+                  "segmentId": "T02-032",
+                  "quote": "Automation nghĩa là để máy nó tự động làm — tự động hoá. Augmentation là vẫn cần con người, AI chỉ giúp tăng cường công việc đấy thôi",
+                  "keyPhrase": "AI chỉ giúp tăng cường"
+                }
+              },
+              {
+                "text": ". Đây "
+              },
+              {
+                "text": "không phải hai thái cực mà là phổ mức automate tăng dần",
+                "evidence": {
+                  "segmentId": "T02-032",
+                  "quote": "nó không phải hai thái cực — không phải hoặc automation hoàn toàn hoặc augmentation hoàn toàn — mà nó là một cái phổ, mức automate tăng dần lên",
+                  "keyPhrase": "một cái phổ"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Thường bắt đầu augmentation (có người giám sát) rồi mới tăng số bước AI làm",
+                "evidence": {
+                  "segmentId": "T02-033",
+                  "quote": "Thường người ta sẽ bắt đầu với augmentation trước — tăng cường trước, tức là luôn có con người giám sát ở đấy",
+                  "keyPhrase": "bắt đầu với augmentation trước"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Chọn mức “hợp lý”: nếu "
+            },
+            {
+              "text": "sai gây hậu quả nghiêm trọng thì giữ gần phía augmentation",
+              "evidence": {
+                "segmentId": "T02-034",
+                "quote": "nếu công việc đấy sai mà gây hậu quả cực kỳ nghiêm trọng, thì nó cần luôn nằm ở gần phía augmentation",
+                "keyPhrase": "hậu quả cực kỳ nghiêm trọng"
+              }
+            },
+            {
+              "text": "; nếu lỗi dễ sửa và tần suất cao thì mới tăng automation. Đừng automate 100% ngay từ đầu."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Là bước thứ hai trong khung quyết định đưa AI vào sản phẩm",
+              "evidence": {
+                "segmentId": "T02-032",
+                "quote": "Bước thứ hai là chọn mức độ tự động hoá",
+                "keyPhrase": "chọn mức độ tự động hoá"
+              }
+            },
+            {
+              "text": "Giảng viên nhấn: đừng automate 100% ngay lập tức vì rủi ro lớn",
+              "evidence": {
+                "segmentId": "T02-033",
+                "quote": "đừng cố gắng automate mọi thứ 100% ngay lập tức, vì cái đấy có thể có những rủi ro rất lớn",
+                "keyPhrase": "rủi ro rất lớn"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c04",
+          "name": "Định lượng bài toán trước khi bán AI",
+          "tier": "important",
+          "order": 1,
+          "estimated_minutes": 4,
+          "short_summary": "Phải ước lượng giờ công / tiền tiết kiệm — công ty sẽ hỏi AI giúp sinh lời hay tiết kiệm bao nhiêu.",
+          "narrative": [
+            [
+              {
+                "text": "Công ty sẽ hỏi AI giúp sinh lời hay tiết kiệm bao nhiêu — phải định lượng giờ công / tiền",
+                "evidence": {
+                  "segmentId": "T02-018",
+                  "quote": "AI này sẽ giúp tôi sinh lời được bao nhiêu, hoặc tiết kiệm được bao nhiêu tiền — công ty chắc chắn sẽ hỏi thế",
+                  "keyPhrase": "tiết kiệm được bao nhiêu tiền"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Không cần số tuyệt đối chính xác, nhưng phải ra được hình dung tác động",
+                "evidence": {
+                  "segmentId": "T02-018",
+                  "quote": "Tất nhiên mình không thể có con số chính xác tuyệt đối được, nhưng định lượng rất quan trọng",
+                  "keyPhrase": "định lượng rất quan trọng"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Công thức tối thiểu: (số người × phút tiết kiệm/ngày × số ngày) → quy ra giờ hoặc tiền. "
+            },
+            {
+              "text": "Định lượng là bước “quan trọng nhất” sau khi đã có khung phát biểu vấn đề.",
+              "evidence": {
+                "segmentId": "T02-018",
+                "quote": "Tất nhiên mình không thể có con số chính xác tuyệt đối được, nhưng định lượng rất quan trọng",
+                "keyPhrase": "định lượng rất quan trọng"
+              }
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Được gọi là cái quan trọng nhất sau khi làm thử khung phát biểu vấn đề",
+              "evidence": {
+                "segmentId": "T02-018",
+                "quote": "Và cái quan trọng nhất — việc này nãy các bạn cũng vừa làm thử — là chúng ta phải định lượng được bài toán đấy",
+                "keyPhrase": "cái quan trọng nhất"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c05",
+          "name": "North Star Metric và chỉ số trung gian",
+          "tier": "important",
+          "order": 2,
+          "estimated_minutes": 4,
+          "short_summary": "North Star là value cuối cùng; visit/retention chỉ là bậc thang giả thuyết dẫn tới nó.",
+          "narrative": [
+            [
+              {
+                "text": "North Star Metric là value cuối cùng / kim chỉ nam sản phẩm hướng tới",
+                "evidence": {
+                  "segmentId": "T02-025",
+                  "quote": "Chỉ số cuối cùng hướng tới là North Star Metric — kim chỉ nam của sản phẩm",
+                  "keyPhrase": "North Star Metric"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Visit, thời gian dùng, retention chỉ là chỉ số ở giữa — nối dần tới chỉ số cuối",
+                "evidence": {
+                  "segmentId": "T02-024",
+                  "quote": "nó chỉ là chỉ số ở giữa, chỉ số để nối dần đến chỉ số cuối cùng",
+                  "keyPhrase": "chỉ số ở giữa"
+                }
+              },
+              {
+                "text": ". "
+              },
+              {
+                "text": "Với sản phẩm học tập, cần đo tới hiệu quả học, không dừng ở số lần mở app",
+                "evidence": {
+                  "segmentId": "T02-024",
+                  "quote": "Một sản phẩm học tập thì cái cuối cùng hướng đến là làm thế nào để tăng được hiệu quả học tập",
+                  "keyPhrase": "tăng được hiệu quả học tập"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Khi thiết kế đo lường: viết 1 câu North Star, rồi liệt kê 2–3 chỉ số trung gian là giả thuyết dẫn tới nó. Nếu chỉ tối ưu visit mà không đụng hiệu quả học, bạn đang tối ưu sai tầng."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Được giảng như cách thiết kế đo lường ở mức high level",
+              "evidence": {
+                "segmentId": "T02-025",
+                "quote": "Đầu tiên là bạn phải xác định ra North Star Metric — cái value cuối cùng mà mình hướng tới",
+                "keyPhrase": "value cuối cùng"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c06",
+          "name": "Ba cấp kỹ thuật: rule-based → workflow → agent",
+          "tier": "important",
+          "order": 3,
+          "estimated_minutes": 5,
+          "short_summary": "Đừng nhảy thẳng lên agent: bắt đầu rule, rồi workflow, agent chỉ khi chạm trần.",
+          "narrative": [
+            [
+              {
+                "text": "Rule-based: việc viết thành quy tắc rõ thì code chạy được, không cần AI",
+                "evidence": {
+                  "segmentId": "T02-036",
+                  "quote": "những gì có thể viết thành quy tắc rất rõ ràng được, thì có thể đưa vào code và máy chạy, chúng ta không cần đến AI luôn",
+                  "keyPhrase": "không cần đến AI luôn"
+                }
+              },
+              {
+                "text": ". Tiếp theo là workflow — "
+              },
+              {
+                "text": "các pattern đơn giản đã đủ nhiều nhu cầu cơ bản, chưa cần phức tạp",
+                "evidence": {
+                  "segmentId": "T02-037",
+                  "quote": "ba cái đầu tiên là cực kỳ hiệu quả, đã đủ đáp ứng hầu hết các nhu cầu cơ bản — chưa cần phải nghĩ cái phức tạp",
+                  "keyPhrase": "ba cái đầu tiên"
+                }
+              },
+              {
+                "text": ". Agent chỉ khi đã chạm trần giải pháp đơn giản."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Thứ tự build: "
+            },
+            {
+              "text": "tìm vấn đề và chọn solution đơn giản nhất trước",
+              "evidence": {
+                "segmentId": "T02-040",
+                "quote": "đâu là vấn đề, và đâu là một solution đơn giản nhất có thể giải quyết vấn đề đấy — thì mình ưu tiên làm trước",
+                "keyPhrase": "solution đơn giản nhất"
+              }
+            },
+            {
+              "text": " → rule → workflow → agent. Nếu rule giải được, đừng nhảy agent cho “oách”."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Thang kỹ thuật chính của nửa sau buổi, nhấn đừng lạm dụng công nghệ",
+              "evidence": {
+                "segmentId": "T02-036",
+                "quote": "Chúng ta cứ luôn đi từ những cái đơn giản trở lên trước",
+                "keyPhrase": "đi từ những cái đơn giản"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c07",
+          "name": "Hỏi lại: có thật sự cần AI không?",
+          "tier": "supporting",
+          "order": 1,
+          "estimated_minutes": 3,
+          "short_summary": "Sau khi liệt kê vấn đề, đổi “dùng AI” thành câu hỏi: còn cách khác không?",
+          "narrative": [
+            [
+              {
+                "text": "Sau khi liệt kê vấn đề, đổi câu “dùng AI” thành câu hỏi: còn cách nào khác không — rồi mới quyết định đưa AI vào",
+                "evidence": {
+                  "segmentId": "T02-014",
+                  "quote": "mình hãy cố gắng đổi nó thành câu hỏi: còn cách nào khác nữa hay không — để thực sự xác định là chúng ta có nên đưa AI vào hay không",
+                  "keyPhrase": "còn cách nào khác nữa hay không"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Thói quen: với mỗi pain point, buộc có ít nhất một phương án không-AI (template, quy trình, tool có sẵn). Chỉ chọn AI khi nó thắng rõ trên chi phí/rủi ro/độ phức tạp."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Được nhấn là điểm rất quan trọng cần lưu ý ngay sau ma trận ưu tiên",
+              "evidence": {
+                "segmentId": "T02-014",
+                "quote": "Tuy nhiên, đây sẽ là một điểm rất quan trọng và cần lưu ý",
+                "keyPhrase": "điểm rất quan trọng"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d2-c08",
+          "name": "A/B test: một biến mỗi lần",
+          "tier": "supporting",
+          "order": 2,
+          "estimated_minutes": 3,
+          "short_summary": "Mỗi lần chỉ đổi một biến thì mới biết cái gì gây tác động.",
+          "narrative": [
+            [
+              {
+                "text": "Mỗi lần A/B test chỉ nên thay đổi một biến — nếu đổi hai biến cùng lúc sẽ không biết cái nào ảnh hưởng",
+                "evidence": {
+                  "segmentId": "T02-029",
+                  "quote": "mỗi một lần A/B test bạn chỉ nên thay đổi một biến trong đấy thôi thì bạn mới đo được",
+                  "keyPhrase": "chỉ nên thay đổi một biến"
+                }
+              },
+              {
+                "text": "."
+              }
+            ]
+          ],
+          "practiceDepth": [
+            {
+              "text": "Khi kiểm chứng giả thuyết đo lường hoặc tính năng: một thay đổi → một lần đo → kết luận. Giữ biến còn lại cố định."
+            }
+          ],
+          "reasons": [
+            {
+              "text": "Minh họa cách kiểm chứng giả thuyết đo lường / tính năng",
+              "evidence": {
+                "segmentId": "T02-027",
+                "quote": "có nhiều tính năng, làm thế nào để đánh giá được tính năng nào ảnh hưởng cái gì, đúng không? Mình test — mình A/B test",
+                "keyPhrase": "A/B test"
+              }
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "total": 8,
+        "core": 3,
+        "important": 3,
+        "supporting": 2
+      },
+      "segments": []
+    }
+  }
+}
