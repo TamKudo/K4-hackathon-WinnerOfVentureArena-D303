@@ -33,7 +33,15 @@ export default function ReviewMap({ lesson, onBack, onOpenConcept }) {
         <p className="muted">
           {picked.length}/{lesson.concepts.length} khái niệm · ~{totalMin}' đọc
         </p>
+        {lesson.data_source && <p className="muted small">{lesson.data_source}</p>}
       </header>
+
+      {lesson.concepts.length === 0 && (
+        <p className="muted">
+          Không đủ căn cứ trong transcript này để tạo khái niệm nào — không bịa ra để có nội
+          dung hiển thị (G10, xem spec.md §4).
+        </p>
+      )}
 
       <div className="budget-row">
         {BUDGETS.map((b) => (

@@ -6,13 +6,15 @@ import ReviewMap from "./components/ReviewMap.jsx";
 import ConceptDetail from "./components/ConceptDetail.jsx";
 import TranscriptDrawer from "./components/TranscriptDrawer.jsx";
 import TutorModal from "./components/TutorModal.jsx";
+import LiveDemo from "./components/LiveDemo.jsx";
 
 export default function App() {
   const [lessons, setLessons] = useState(null);
   const [error, setError] = useState(null);
 
   const [lesson, setLesson] = useState(null); // chi tiết đầy đủ (segments + concepts)
-  const [view, setView] = useState("home"); // home | lesson | map | detail
+  const [view, setView] = useState("home"); // home | lesson | map | detail | live
+  const [origin, setOrigin] = useState("catalog"); // catalog | live — quyết định nút back từ map đi đâu
   const [conceptId, setConceptId] = useState(null);
 
   const [drawer, setDrawer] = useState(null); // { evidenceList, activeIndex }
@@ -28,10 +30,18 @@ export default function App() {
       const full = await api.getLesson(id);
       setLesson(full);
       setConceptId(null);
+      setOrigin("catalog");
       setView("lesson");
     } catch (e) {
       setError(e.message);
     }
+  }
+
+  function onGenerated(liveLesson) {
+    setLesson(liveLesson);
+    setConceptId(null);
+    setOrigin("live");
+    setView("map");
   }
 
   function openTranscript(evidenceList, activeIndex) {
@@ -50,7 +60,11 @@ export default function App() {
       {error && <div className="error-banner">{error}</div>}
 
       {view === "home" && lessons && (
-        <Home lessons={lessons} onOpenLesson={openLesson} />
+        <Home lessons={lessons} onOpenLesson={openLesson} onOpenLiveDemo={() => setView("live")} />
+      )}
+
+      {view === "live" && (
+        <LiveDemo onBack={() => setView("home")} onGenerated={onGenerated} />
       )}
 
       {view === "lesson" && lesson && (
@@ -64,7 +78,7 @@ export default function App() {
       {view === "map" && lesson && (
         <ReviewMap
           lesson={lesson}
-          onBack={() => setView("lesson")}
+          onBack={() => setView(origin === "live" ? "live" : "lesson")}
           onOpenConcept={(id) => {
             setConceptId(id);
             setView("detail");

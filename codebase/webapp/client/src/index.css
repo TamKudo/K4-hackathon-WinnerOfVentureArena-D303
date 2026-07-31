@@ -109,6 +109,8 @@ h1, h2, h3 {
   padding: 16px;
 }
 .lesson-card:hover { border-color: var(--accent); }
+.lesson-card.selected { border-color: var(--accent); background: var(--accent-bg); }
+.lesson-card:disabled { opacity: 0.6; cursor: default; }
 
 .chip-row { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
 

@@ -1,4 +1,4 @@
-export default function Home({ lessons, onOpenLesson }) {
+export default function Home({ lessons, onOpenLesson, onOpenLiveDemo }) {
   return (
     <div className="screen">
       <header className="screen-header">
@@ -18,6 +18,10 @@ export default function Home({ lessons, onOpenLesson }) {
           </button>
         ))}
       </div>
+
+      <button className="link" style={{ marginTop: 24 }} onClick={onOpenLiveDemo}>
+        Demo trực tiếp — gọi AI thật với transcript khác →
+      </button>
     </div>
   );
 }

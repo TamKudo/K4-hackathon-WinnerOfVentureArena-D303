@@ -7,3 +7,6 @@ services:
     buildCommand: npm install --prefix client && npm run build --prefix client && npm install --prefix server
     startCommand: npm start --prefix server
     autoDeploy: true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false # nhập tay trong Render dashboard — không commit key vào repo
