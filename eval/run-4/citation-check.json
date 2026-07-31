@@ -1,0 +1,753 @@
+{
+  "totalCitations": 62,
+  "verifiedCitations": 56,
+  "exactCitations": 50,
+  "coreCount": 10,
+  "schemaIssues": [],
+  "unverified": [
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-038",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-039",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-038",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-039",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "token_12",
+      "conceptName": "Token",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-049",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "token_12",
+      "conceptName": "Token",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-049",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    }
+  ],
+  "caseMismatchOnly": [
+    {
+      "conceptId": "multihead_attention_15",
+      "conceptName": "Multi-head Attention",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-056",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "multihead_attention_15",
+      "conceptName": "Multi-head Attention",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-056",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "quan_ly_context_16",
+      "conceptName": "Quản lý Context",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-053",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "quan_ly_context_16",
+      "conceptName": "Quản lý Context",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-053",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "tham_so_parameter_18",
+      "conceptName": "Tham số (Parameter)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-058",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "tham_so_parameter_18",
+      "conceptName": "Tham số (Parameter)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-058",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    }
+  ],
+  "all": [
+    {
+      "conceptId": "nen_tang_cua_ai_0",
+      "conceptName": "Nền tảng của AI",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-003",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "nen_tang_cua_ai_0",
+      "conceptName": "Nền tảng của AI",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-003",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mo_hinh_ngon_ngu_lon_llm_1",
+      "conceptName": "Mô hình ngôn ngữ lớn (LLM)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-003",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mo_hinh_ngon_ngu_lon_llm_1",
+      "conceptName": "Mô hình ngôn ngữ lớn (LLM)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-003",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "su_khac_biet_giua_ai_truyen_thong_va_ai_hien_ai_2",
+      "conceptName": "Sự khác biệt giữa AI truyền thống và AI hiện đại",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-003",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "su_khac_biet_giua_ai_truyen_thong_va_ai_hien_ai_2",
+      "conceptName": "Sự khác biệt giữa AI truyền thống và AI hiện đại",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-003",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "buc_tranh_tong_quan_ve_ai_3",
+      "conceptName": "Bức tranh tổng quan về AI",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "buc_tranh_tong_quan_ve_ai_3",
+      "conceptName": "Bức tranh tổng quan về AI",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "thuat_ngu_ai_4",
+      "conceptName": "Thuật ngữ AI",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "thuat_ngu_ai_4",
+      "conceptName": "Thuật ngữ AI",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-015",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "turing_test_5",
+      "conceptName": "Turing test",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-018",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "turing_test_5",
+      "conceptName": "Turing test",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-018",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "lich_su_ai_6",
+      "conceptName": "Lịch sử AI",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-022",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "lich_su_ai_6",
+      "conceptName": "Lịch sử AI",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-022",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "deep_learning_7",
+      "conceptName": "Deep learning",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-030",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "deep_learning_7",
+      "conceptName": "Deep learning",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-030",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "su_khac_biet_giua_machine_learning_va_deep_learning_8",
+      "conceptName": "Sự khác biệt giữa machine learning và deep learning",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-032",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "su_khac_biet_giua_machine_learning_va_deep_learning_8",
+      "conceptName": "Sự khác biệt giữa machine learning và deep learning",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-032",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "alphago_9",
+      "conceptName": "AlphaGo",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-035",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "alphago_9",
+      "conceptName": "AlphaGo",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-036",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "alphago_9",
+      "conceptName": "AlphaGo",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-035",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "alphago_9",
+      "conceptName": "AlphaGo",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-036",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-038",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-039",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-038",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "kien_truc_transformer_10",
+      "conceptName": "Kiến trúc Transformer",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-039",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "mo_hinh_ngon_ngu_lon_llm_11",
+      "conceptName": "Mô hình ngôn ngữ lớn (LLM)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-046",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mo_hinh_ngon_ngu_lon_llm_11",
+      "conceptName": "Mô hình ngôn ngữ lớn (LLM)",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-047",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mo_hinh_ngon_ngu_lon_llm_11",
+      "conceptName": "Mô hình ngôn ngữ lớn (LLM)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-046",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mo_hinh_ngon_ngu_lon_llm_11",
+      "conceptName": "Mô hình ngôn ngữ lớn (LLM)",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-047",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "token_12",
+      "conceptName": "Token",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-049",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "token_12",
+      "conceptName": "Token",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-050",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "token_12",
+      "conceptName": "Token",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-049",
+      "segmentExists": true,
+      "quoteVerified": false,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "token_12",
+      "conceptName": "Token",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-050",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "context_13",
+      "conceptName": "Context",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-051",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "context_13",
+      "conceptName": "Context",
+      "from": "learningPoints",
+      "index": 1,
+      "segmentId": "T04-052",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "context_13",
+      "conceptName": "Context",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-051",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "context_13",
+      "conceptName": "Context",
+      "from": "reasons",
+      "index": 1,
+      "segmentId": "T04-052",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "attention_14",
+      "conceptName": "Attention",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-053",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "attention_14",
+      "conceptName": "Attention",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-053",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "multihead_attention_15",
+      "conceptName": "Multi-head Attention",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-056",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "multihead_attention_15",
+      "conceptName": "Multi-head Attention",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-056",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "quan_ly_context_16",
+      "conceptName": "Quản lý Context",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-053",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "quan_ly_context_16",
+      "conceptName": "Quản lý Context",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-053",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "reinforcement_learning_with_human_feedback_rlhf_17",
+      "conceptName": "Reinforcement Learning with Human Feedback (RLHF)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-059",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "reinforcement_learning_with_human_feedback_rlhf_17",
+      "conceptName": "Reinforcement Learning with Human Feedback (RLHF)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-059",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "tham_so_parameter_18",
+      "conceptName": "Tham số (Parameter)",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-058",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "tham_so_parameter_18",
+      "conceptName": "Tham số (Parameter)",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-058",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": false
+    },
+    {
+      "conceptId": "ai_agent_19",
+      "conceptName": "AI Agent",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-073",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "ai_agent_19",
+      "conceptName": "AI Agent",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-073",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "evaluation_20",
+      "conceptName": "Evaluation",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-075",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "evaluation_20",
+      "conceptName": "Evaluation",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-075",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mixture_of_experts_21",
+      "conceptName": "Mixture of Experts",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-086",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "mixture_of_experts_21",
+      "conceptName": "Mixture of Experts",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-086",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "goi_api_mo_hinh_llm_22",
+      "conceptName": "Gọi API mô hình LLM",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-087",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "goi_api_mo_hinh_llm_22",
+      "conceptName": "Gọi API mô hình LLM",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-087",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "transformer_23",
+      "conceptName": "Transformer",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-094",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "transformer_23",
+      "conceptName": "Transformer",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-094",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "co_che_attention_24",
+      "conceptName": "Cơ chế attention",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-094",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "co_che_attention_24",
+      "conceptName": "Cơ chế attention",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-094",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "vong_lap_autoregressive_cua_llm_25",
+      "conceptName": "Vòng lặp autoregressive của LLM",
+      "from": "learningPoints",
+      "index": 0,
+      "segmentId": "T04-096",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    },
+    {
+      "conceptId": "vong_lap_autoregressive_cua_llm_25",
+      "conceptName": "Vòng lặp autoregressive của LLM",
+      "from": "reasons",
+      "index": 0,
+      "segmentId": "T04-096",
+      "segmentExists": true,
+      "quoteVerified": true,
+      "quoteExact": true
+    }
+  ]
+}

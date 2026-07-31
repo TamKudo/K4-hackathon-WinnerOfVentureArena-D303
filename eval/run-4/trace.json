@@ -1,0 +1,27 @@
+{
+  "model": "llama-3.3-70b-versatile",
+  "chunkSize": 18,
+  "chunkCount": 6,
+  "maxCore": 5,
+  "calls": [
+    {
+      "callLabel": "assign-tiers-attempt-1",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:53:08.071Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.059120509,
+        "prompt_tokens": 5238,
+        "prompt_time": 0.272449927,
+        "completion_tokens": 642,
+        "completion_time": 1.170448586,
+        "total_tokens": 5880,
+        "total_time": 1.442898513
+      },
+      "parseError": null
+    }
+  ],
+  "transcriptPath": "C:\\Users\\minht\\Batch03-K4-AI-Product-Hackathon-NhomA31\\data\\vlearn-pack\\transcript\\transcript-04-clean.md",
+  "reusedCandidatesFrom": "eval/run-2/candidates.json",
+  "candidateCount": 26
+}

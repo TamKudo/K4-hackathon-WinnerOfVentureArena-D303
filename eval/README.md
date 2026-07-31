@@ -3,11 +3,25 @@
 ## Nội dung
 
 - `golden-set.md` — 36 case kiểm thử (≥20 yêu cầu), xây tay trên `data/vlearn-pack/transcript/transcript-04-clean.md` (Day 1 — Foundation). Mỗi case có quy tắc pass/fail cụ thể để hai người chấm độc lập ra cùng kết quả.
-- `run-1/` — kết quả lượt gọi AI thật đầu tiên (sinh sau khi chạy script), gồm:
+- `run-1/` … `run-5/` — kết quả 5 lượt gọi AI thật (sinh sau khi chạy script), mỗi thư mục gồm:
   - `ai-output.json` — Review Map do model sinh ra
-  - `trace.json` — log đầy đủ: system prompt, model, thời điểm, raw response từ OpenRouter
-  - `citation-check.json` — kết quả kiểm tra tự động: mọi `segmentId`/`quote` model trích có thật trong transcript không (lớp chỗ khó ① Nguồn sự thật)
-- `run-1-results.md` — bảng chấm 36 case theo golden set, đối chiếu quality bar trong `spec.md` §7.
+  - `candidates.json` — khái niệm nháp từ vòng 1 (extract), trước khi gán tier/gộp
+  - `tagged-candidates.json` — candidate sau khi AI gán tier (từ lượt 3, khi tách vòng gộp)
+  - `trace.json` — log đầy đủ: model, cấu hình lô, số lời gọi AI, usage, thời điểm
+  - `citation-check.json` — kiểm tra tự động: mọi `segmentId`/`quote` model trích có thật trong transcript không (lớp chỗ khó ① Nguồn sự thật)
+- `run-1-results.md` … `run-5-results.md` — bảng chấm 36 case theo golden set từng lượt, đối chiếu quality bar trong `spec.md` §7.
+
+## Diễn biến 5 lượt
+
+| Lượt | % đạt | Thay đổi chính | Lời gọi AI |
+|---|---|---|---|
+| 1 | 46,9% (15/32) | Lượt đầu, chunk cố định 18 đoạn | 7 (6 extract + 1 consolidate) |
+| 2 | 59,4% (19/32) | Chunk theo heading, giới hạn core, ví dụ hedge | 7+ |
+| 3 | 48,5% (16/33) | Tách vòng gộp: AI chỉ gán tier, gộp bằng code | 10 (đủ cả 2 vòng) |
+| 4 | 57,6% (19/33) | Nới điều kiện gộp — chưa có tác dụng | 1 (dùng lại candidate) |
+| 5 | **63,6% (21/33)** | Gộp theo tập từ lõi — hoạt động (26→21) | 1 (dùng lại candidate) |
+
+**Số liệu chính thức: lượt 5 — 63,6%, chưa đạt bar 70%.** Lượt 4 và 5 dùng lại candidate từ lượt trước (`reusedCandidatesFrom` trong `trace.json`) để tiết kiệm quota Groq free tier, nên chỉ đo bước gán tier + gộp. Lượt chạy đủ cả hai vòng AI gần nhất là **lượt 3**.
 
 ## Cách chạy lượt AI thật
 

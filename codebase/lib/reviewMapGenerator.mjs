@@ -3,10 +3,7 @@
 // schema cuối bằng code xác định (không AI). Xem lịch sử quyết định 3 lượt sửa prompt ở
 // eval/run-1-results.md, eval/run-2-results.md.
 //
-// Dùng chung bởi:
-//   - codebase/generate-review-map.mjs   (CLI, ghi kết quả ra eval/run-N/ cho golden set)
-//   - codebase/webapp/server/index.js    (endpoint POST /api/generate, chạy live cho demo)
-// Tách ra file riêng để không lặp lại ~300 dòng logic ở hai chỗ.
+// Dùng bởi codebase/generate-review-map.mjs (CLI, ghi kết quả ra eval/run-N/ cho golden set).
 
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
@@ -202,8 +199,11 @@ async function assignTiers(candidates, { apiKey, model, maxCore, traceLog, onPro
   throw new Error(`Không lấy được tier hợp lệ cho ${candidates.length} khái niệm sau ${maxAttempts} lần thử — dừng thay vì âm thầm dùng dữ liệu thiếu.`);
 }
 
-// Vòng 2b — gộp trùng lặp bằng code xác định (không AI): chỉ gộp khi tên gần giống NHAU
-// VÀ có chung ít nhất 1 segmentId trong evidence. Candidate không khớp ai thì giữ nguyên riêng.
+// Vòng 2b — gộp trùng lặp bằng code xác định (không AI): gộp khi tên gần giống nhau.
+// Lượt 3 dùng điều kiện chặt hơn (tên gần giống VÀ chung segmentId) nên gộp được 0/26 candidate:
+// hai candidate cùng một khái niệm nhưng trích hai đoạn khác nhau thì không bao giờ khớp
+// (vd. "Attention" T04-053 vs "Cơ chế attention" T04-094). Bỏ vế chung-segmentId, chỉ giữ
+// so khớp tên — xem eval/run-4-results.md.
 function normalizeName(name) {
   return (name || "")
     .toLowerCase()
@@ -213,21 +213,43 @@ function normalizeName(name) {
     .trim();
 }
 
+// Từ nối/từ mô tả chung — có mặt ở rất nhiều tên khái niệm nên không mang tính phân biệt.
+// Bỏ chúng đi trước khi so khớp để "Cơ chế attention" và "Attention" quy về cùng một lõi.
+// Chỉ gồm từ chỉ LOẠI/CẤU TRÚC ("cơ chế X", "kiến trúc X", "kỹ thuật X") — bỏ chúng thì
+// "Cơ chế attention" và "Attention" quy về cùng lõi. KHÔNG đưa vào đây các từ mang nghĩa
+// phân biệt như "so sánh/khác biệt": bỏ chúng sẽ khiến "Sự khác biệt giữa ML và deep learning"
+// bị nuốt vào "Deep learning" dù là hai khái niệm khác nhau.
+const NAME_STOPWORDS = new Set([
+  "co", "che", "khai", "niem", "kien", "truc", "ky", "thuat", "cua", "va", "voi", "trong", "cac",
+]);
+
+function nameTokens(name) {
+  return new Set(
+    normalizeName(name)
+      .split(/\s+/)
+      .filter((w) => w && !NAME_STOPWORDS.has(w))
+  );
+}
+
+// Tên dạng "sự khác biệt giữa X và Y" / "so sánh X với Y" mô tả QUAN HỆ giữa hai khái niệm,
+// không phải một khái niệm con của X — không được gộp vào X dù tên có chứa X.
+const CONTRAST_MARKERS = ["khac biet", "so sanh", "phan biet"];
+
+function isContrastName(name) {
+  const n = normalizeName(name);
+  return CONTRAST_MARKERS.some((m) => n.includes(m));
+}
+
+// Gộp khi phần lõi của tên trùng nhau: tập từ này là tập con của tập từ kia.
+// So theo TỪ (không phải chuỗi con) để tránh khớp nhầm ở mức ký tự.
 function namesLikelyMatch(a, b) {
-  const na = normalizeName(a);
-  const nb = normalizeName(b);
-  if (!na || !nb) return false;
-  if (na === nb) return true;
-  return na.includes(nb) || nb.includes(na);
-}
-
-function evidenceSegmentIds(candidate) {
-  return new Set((candidate.evidence || []).map((e) => e.segmentId).filter(Boolean));
-}
-
-function shareSegment(setA, setB) {
-  for (const id of setA) if (setB.has(id)) return true;
-  return false;
+  if (isContrastName(a) !== isContrastName(b)) return false;
+  const ta = nameTokens(a);
+  const tb = nameTokens(b);
+  if (!ta.size || !tb.size) return false;
+  const [small, big] = ta.size <= tb.size ? [ta, tb] : [tb, ta];
+  for (const w of small) if (!big.has(w)) return false;
+  return true;
 }
 
 const TIER_RANK = { core: 0, important: 1, supporting: 2 };
@@ -235,10 +257,9 @@ const TIER_RANK = { core: 0, important: 1, supporting: 2 };
 function mergeCandidates(taggedCandidates) {
   const groups = [];
   for (const cand of taggedCandidates) {
-    const segIds = evidenceSegmentIds(cand);
     let target = null;
     for (const g of groups) {
-      const matchesAny = g.members.some((m) => namesLikelyMatch(m.name, cand.name) && shareSegment(evidenceSegmentIds(m), segIds));
+      const matchesAny = g.members.some((m) => namesLikelyMatch(m.name, cand.name));
       if (matchesAny) {
         target = g;
         break;
@@ -286,9 +307,18 @@ function buildFinalConcepts(groups) {
   });
 }
 
+// Chuẩn hoá dấu nháy trước khi so khớp: model hay chép "Attention Is All You Need" thành
+// 'Attention Is All You Need'. Nội dung chép đúng nguyên văn, chỉ khác kiểu nháy — cùng loại
+// với lệch hoa/thường, không phải bịa nội dung. Gom CẢ nháy đơn lẫn nháy kép (thẳng và cong)
+// về một ký tự duy nhất, vì lệch thường là giữa hai LOẠI nháy chứ không chỉ giữa các biến thể
+// cùng loại.
+function normalizeQuoteChars(s) {
+  return s.replace(/["'‘’‚‛“”„‟]/g, '"');
+}
+
 // Kiểm tra tự động lớp "nguồn sự thật": mọi citation phải trỏ đúng segment có thật.
-// So khớp KHÔNG phân biệt hoa/thường (lệch hoa/thường không tính là fabrication),
-// nhưng vẫn ghi lại cả kết quả so khớp nghiêm ngặt (case-sensitive) để minh bạch.
+// So khớp KHÔNG phân biệt hoa/thường và không phân biệt kiểu dấu nháy (hai lệch này không tính
+// là fabrication), nhưng vẫn ghi lại cả kết quả so khớp nghiêm ngặt để minh bạch.
 function checkCitations(finalConcepts, segmentMap) {
   const citationChecks = [];
   const schemaIssues = [];
@@ -305,8 +335,11 @@ function checkCitations(finalConcepts, segmentMap) {
       const quote = evidence?.quote;
       const segText = segmentMap.get(segId);
       const segmentExists = Boolean(segText);
-      const quoteExact = segmentExists && typeof quote === "string" && segText.includes(quote.trim());
-      const quoteVerified = segmentExists && typeof quote === "string" && segText.toLowerCase().includes(quote.trim().toLowerCase());
+      const hasQuote = segmentExists && typeof quote === "string";
+      const quoteExact = hasQuote && segText.includes(quote.trim());
+      const quoteVerified =
+        hasQuote &&
+        normalizeQuoteChars(segText).toLowerCase().includes(normalizeQuoteChars(quote.trim()).toLowerCase());
       citationChecks.push({ conceptId: c.id, conceptName: c.name, from, index: i, segmentId: segId, segmentExists, quoteVerified, quoteExact });
     }
   }
@@ -404,7 +437,7 @@ export async function generateReviewMap({
     return { ...c, tier: t.tier, uncertain_signal: t.uncertain_signal };
   });
 
-  onProgress(`Vòng 2b — gộp trùng lặp bằng code (bảo thủ: tên gần giống + chung segmentId)...`);
+  onProgress(`Vòng 2b — gộp trùng lặp bằng code (so khớp lõi tên khái niệm)...`);
   const groups = mergeCandidates(taggedCandidates);
   onProgress(`  -> ${allCandidates.length} candidate gộp còn ${groups.length} khái niệm (không candidate nào bị xoá).`);
 

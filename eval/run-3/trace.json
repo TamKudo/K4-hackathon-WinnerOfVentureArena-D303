@@ -1,0 +1,165 @@
+{
+  "model": "llama-3.3-70b-versatile",
+  "chunkSize": 18,
+  "chunkCount": 6,
+  "maxCore": 5,
+  "calls": [
+    {
+      "callLabel": "extract-chunk-1",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:39:18.182Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.05938777,
+        "prompt_tokens": 4107,
+        "prompt_time": 0.240134357,
+        "completion_tokens": 657,
+        "completion_time": 1.4652321719999999,
+        "total_tokens": 4764,
+        "total_time": 1.705366529
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-2",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:39:28.488Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.163692038,
+        "prompt_tokens": 4589,
+        "prompt_time": 0.225878048,
+        "completion_tokens": 798,
+        "completion_time": 1.8798235920000002,
+        "total_tokens": 5387,
+        "total_time": 2.10570164
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-3",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:39:40.743Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.063064072,
+        "prompt_tokens": 3655,
+        "prompt_time": 0.206189775,
+        "completion_tokens": 468,
+        "completion_time": 1.074756699,
+        "total_tokens": 4123,
+        "total_time": 1.280946474
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-4",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:39:51.019Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyv7brzkf9ht6nb67kjhc7av` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 7749, Requested 7259. Please try again in 15.04s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "extract-chunk-4",
+      "attempt": 2,
+      "startedAt": "2026-07-31T04:40:14.307Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.165916322,
+        "prompt_tokens": 6461,
+        "prompt_time": 0.409685941,
+        "completion_tokens": 937,
+        "completion_time": 2.760627558,
+        "total_tokens": 7398,
+        "total_time": 3.170313499
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-5",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:40:29.294Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyv7brzkf9ht6nb67kjhc7av` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 7491, Requested 6371. Please try again in 9.31s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "extract-chunk-5",
+      "attempt": 2,
+      "startedAt": "2026-07-31T04:40:52.935Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.16540967,
+        "prompt_tokens": 5434,
+        "prompt_time": 0.275195446,
+        "completion_tokens": 674,
+        "completion_time": 2.255573859,
+        "total_tokens": 6108,
+        "total_time": 2.5307693049999997
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "extract-chunk-6",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:41:06.180Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.009888291,
+        "prompt_tokens": 3827,
+        "prompt_time": 0.213920981,
+        "completion_tokens": 600,
+        "completion_time": 1.183954058,
+        "total_tokens": 4427,
+        "total_time": 1.397875039
+      },
+      "parseError": null
+    },
+    {
+      "callLabel": "assign-tiers-attempt-1",
+      "attempt": 1,
+      "startedAt": "2026-07-31T04:41:08.088Z",
+      "status": 429,
+      "rateLimited": true,
+      "raw": {
+        "error": {
+          "message": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kyv7brzkf9ht6nb67kjhc7av` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10313, Requested 5145. Please try again in 17.29s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+          "type": "tokens",
+          "code": "rate_limit_exceeded"
+        }
+      }
+    },
+    {
+      "callLabel": "assign-tiers-attempt-1",
+      "attempt": 2,
+      "startedAt": "2026-07-31T04:41:31.311Z",
+      "status": 200,
+      "usage": {
+        "queue_time": 0.055416658,
+        "prompt_tokens": 5144,
+        "prompt_time": 0.512657837,
+        "completion_tokens": 638,
+        "completion_time": 1.177207496,
+        "total_tokens": 5782,
+        "total_time": 1.689865333
+      },
+      "parseError": null
+    }
+  ],
+  "transcriptPath": "C:\\Users\\minht\\Batch03-K4-AI-Product-Hackathon-NhomA31\\data\\vlearn-pack\\transcript\\transcript-04-clean.md",
+  "reusedCandidatesFrom": null,
+  "candidateCount": 26
+}

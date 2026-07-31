@@ -1,0 +1,412 @@
+[
+  {
+    "name": "Nền tảng của AI",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Nền tảng của AI bao gồm các mô hình ngôn ngữ lớn và các công nghệ liên quan",
+    "evidence": [
+      {
+        "segmentId": "T04-003",
+        "quote": "Ngày hôm nay chúng ta vào bài đầu tiên: học về nền tảng của AI và các mô hình ngôn ngữ lớn — LLM."
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh nền tảng của AI là kiến thức nền tảng cần nắm vững",
+    "sourceChunk": 1,
+    "tier": "core"
+  },
+  {
+    "name": "Mô hình ngôn ngữ lớn (LLM)",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Mô hình ngôn ngữ lớn là một phần quan trọng của nền tảng AI",
+    "evidence": [
+      {
+        "segmentId": "T04-003",
+        "quote": "Ngày hôm nay chúng ta vào bài đầu tiên: học về nền tảng của AI và các mô hình ngôn ngữ lớn — LLM."
+      }
+    ],
+    "reason": "Mô hình ngôn ngữ lớn được nhắc đến như một phần quan trọng của nền tảng AI",
+    "sourceChunk": 1,
+    "tier": "important"
+  },
+  {
+    "name": "Sự khác biệt giữa AI truyền thống và AI hiện đại",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "AI truyền thống và AI hiện đại có sự khác biệt về khả năng và ứng dụng",
+    "evidence": [
+      {
+        "segmentId": "T04-003",
+        "quote": "AI thì rất là rộng: trước khi ChatGPT ra đời, chúng ta đã có AI vài chục năm rồi, và ngày xưa đã có những mô hình AI mà bọn mình hay gọi là AI truyền thống — AI trước thời ChatGPT — đã có rất nhiều rồi."
+      }
+    ],
+    "reason": "Giảng viên giải thích sự khác biệt giữa AI truyền thống và AI hiện đại",
+    "sourceChunk": 1,
+    "tier": "supporting"
+  },
+  {
+    "name": "Bức tranh tổng quan về AI",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Bức tranh tổng quan về AI bao gồm các thuật ngữ và công nghệ liên quan",
+    "evidence": [
+      {
+        "segmentId": "T04-015",
+        "quote": "Ở đây chúng ta sẽ nhìn vào một hình ảnh để dễ dàng hình dung các thuật ngữ này nằm ở đâu trong bức tranh lớn."
+      }
+    ],
+    "reason": "Giảng viên giới thiệu bức tranh tổng quan về AI như một phần quan trọng của khóa học",
+    "sourceChunk": 1,
+    "tier": "core"
+  },
+  {
+    "name": "Thuật ngữ AI",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Thuật ngữ AI bao gồm các khái niệm như trí thông minh, machine learning, deep learning và generative AI",
+    "evidence": [
+      {
+        "segmentId": "T04-015",
+        "quote": "Rộng nhất chúng ta có AI — tắt của artificial intelligence. AI là một từ bao phủ tất cả những từ bên trong."
+      }
+    ],
+    "reason": "Giảng viên giải thích các thuật ngữ AI như một phần quan trọng của nền tảng AI",
+    "sourceChunk": 1,
+    "tier": "important"
+  },
+  {
+    "name": "Turing test",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Bài test kiểm tra khả năng phân biệt giữa máy tính và con người",
+    "evidence": [
+      {
+        "segmentId": "T04-018",
+        "quote": "Bài đấy đơn giản: có một người — một người tester là con người — ngồi ở một phòng; bên trái là máy tính và bên phải là một người khác."
+      }
+    ],
+    "reason": "Giảng viên giải thích rõ về Turing test và nó là một khái niệm quan trọng trong lĩnh vực AI",
+    "sourceChunk": 2,
+    "tier": "core"
+  },
+  {
+    "name": "Lịch sử AI",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "AI đã trải qua 70 năm phát triển với hai lần mùa đông",
+    "evidence": [
+      {
+        "segmentId": "T04-022",
+        "quote": "AI không phải đi thẳng một phát lên đâu, mà nó đã trải qua hai lần mùa đông rồi."
+      }
+    ],
+    "reason": "Giảng viên cung cấp thông tin về lịch sử phát triển của AI và các giai đoạn quan trọng",
+    "sourceChunk": 2,
+    "tier": "important"
+  },
+  {
+    "name": "Deep learning",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Deep learning là một phương pháp học máy dựa trên mạng neuron thần kinh",
+    "evidence": [
+      {
+        "segmentId": "T04-030",
+        "quote": "Ý tưởng khiến cho máy móc có thể học được rất nhiều dữ liệu là tái tạo được mạng neuron thần kinh giống như con người — đấy là nền tảng của deep learning."
+      }
+    ],
+    "reason": "Giảng viên giải thích rõ về deep learning và nó là một khái niệm quan trọng trong lĩnh vực AI",
+    "sourceChunk": 2,
+    "tier": "core"
+  },
+  {
+    "name": "Sự khác biệt giữa machine learning và deep learning",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Deep learning không cần người dùng tự gán nhãn dữ liệu",
+    "evidence": [
+      {
+        "segmentId": "T04-032",
+        "quote": "Trước khi có deep learning, với machine learning, bạn sẽ phải là người tự gán nhãn từng dữ liệu một."
+      }
+    ],
+    "reason": "Giảng viên giải thích sự khác biệt giữa machine learning và deep learning",
+    "sourceChunk": 2,
+    "tier": "supporting"
+  },
+  {
+    "name": "AlphaGo",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "AlphaGo là một AI học chơi cờ vây, tạo ra cú sốc trong ngành khi thắng kỳ thủ cờ vây hàng đầu thế giới Lee Sedol.",
+    "evidence": [
+      {
+        "segmentId": "T04-035",
+        "quote": "AlphaGo là sản phẩm của một team mà sau đấy họ gia nhập Google — tiền thân của Google DeepMind."
+      },
+      {
+        "segmentId": "T04-036",
+        "quote": "Nước đi số 37 là một nước đi khiến cho Lee Sedol — kỳ thủ cờ vây hàng đầu thế giới, người Hàn Quốc — đã phải đứng lên 15 phút để đi ra ngoài, vì ông không thể hiểu nổi vì sao nó lại có thể đi được nước đấy."
+      }
+    ],
+    "reason": "AlphaGo được nhắc đến như một sự kiện quan trọng trong lịch sử phát triển AI, và việc nó thắng Lee Sedol là một ví dụ về khả năng học hỏi và thích nghi của AI.",
+    "sourceChunk": 3,
+    "tier": "core"
+  },
+  {
+    "name": "Kiến trúc Transformer",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Kiến trúc Transformer là một mô hình học sâu được sử dụng trong xử lý ngôn ngữ tự nhiên, cho phép mô hình học hỏi và dự đoán các từ tiếp theo trong một câu.",
+    "evidence": [
+      {
+        "segmentId": "T04-038",
+        "quote": "Bài báo khởi điểm của kiến trúc đấy là 'Attention Is All You Need', xuất bản năm 2017, do team của Google làm."
+      },
+      {
+        "segmentId": "T04-039",
+        "quote": "Transformer có một cách tiếp cận khác, đặc biệt hơn — tại sao lại có chữ attention trong 'Attention Is All You Need' ở đây: thay vì lần lượt đọc và dịch từng chữ một, nó sẽ đọc cả cụm đấy, và nhận diện được đâu là — hiểu nôm na — những keyword, đâu là những cụm từ có sự liên quan đến nhau, để nhận diện ra được mối liên kết giữa nhiều từ trong một câu."
+      }
+    ],
+    "reason": "Kiến trúc Transformer được nhắc đến như một thành tựu quan trọng trong lĩnh vực xử lý ngôn ngữ tự nhiên, và được sử dụng trong nhiều mô hình AI hiện đại.",
+    "sourceChunk": 3,
+    "tier": "core"
+  },
+  {
+    "name": "Mô hình ngôn ngữ lớn (LLM)",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Mô hình ngôn ngữ lớn là một loại mô hình AI được thiết kế để xử lý và hiểu ngôn ngữ tự nhiên, có khả năng sinh ra văn bản, hình ảnh, và các loại dữ liệu khác.",
+    "evidence": [
+      {
+        "segmentId": "T04-046",
+        "quote": "Bản chất các sản phẩm ChatGPT, Claude, Gemini được xây dựng dựa trên một mô hình ngôn ngữ lớn — cái gọi là trái tim, bộ não của AI."
+      },
+      {
+        "segmentId": "T04-047",
+        "quote": "Bản chất của hệ thống Transformer, bản chất của các mô hình ngôn ngữ lớn này, đấy là nó dự đoán. Nó không phải là nó biết cái tri thức đấy, mà là nó đang dự đoán những từ tiếp theo, hoặc là những token — có một thuật ngữ trong LLM là token — nhưng bản chất là nó sẽ dự đoán những từ tiếp theo."
+      }
+    ],
+    "reason": "Mô hình ngôn ngữ lớn được nhắc đến như một thành tựu quan trọng trong lĩnh vực AI, và được sử dụng trong nhiều ứng dụng thực tế.",
+    "sourceChunk": 3,
+    "tier": "important"
+  },
+  {
+    "name": "Token",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Token là một đơn vị tính trong mô hình ngôn ngữ lớn, đại diện cho một từ hoặc một phần của từ.",
+    "evidence": [
+      {
+        "segmentId": "T04-049",
+        "quote": "Token nghĩa là một đơn vị tính — nó không phải là từ, không phải là chữ cái, mà nó là token."
+      },
+      {
+        "segmentId": "T04-050",
+        "quote": "Người ta cũng có một số công thức quy đổi nhanh: từ một câu tiếng Anh có bao nhiêu chữ cái, bao nhiêu ký tự, người ta có thể quy đổi nhanh ra được token."
+      }
+    ],
+    "reason": "Token được nhắc đến như một khái niệm quan trọng trong mô hình ngôn ngữ lớn, và được sử dụng để đo lường và tính toán trong các mô hình AI.",
+    "sourceChunk": 3,
+    "tier": "supporting"
+  },
+  {
+    "name": "Context",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Context là bối cảnh hoặc ngữ cảnh của một mô hình ngôn ngữ lớn, đại diện cho lượng thông tin mà mô hình có thể xử lý trong một lần.",
+    "evidence": [
+      {
+        "segmentId": "T04-051",
+        "quote": "Context nghĩa là bối cảnh, ngữ cảnh. Context ở đây nghĩa là gì? Là toàn bộ những thông tin mà một mô hình nó có thể tiêu thụ trong một lần — có thể hiểu nôm na là thế."
+      },
+      {
+        "segmentId": "T04-052",
+        "quote": "Tuy nhiên cái context này nó cũng có một khái niệm là context rot. Có nghĩa là khi bạn càng đưa nhiều thông tin, càng đưa nhiều ngữ cảnh, thì cái mô hình càng ngày về sau nó sẽ càng kém đi, và nó sẽ thường quên những thông tin ở lúc đầu."
+      }
+    ],
+    "reason": "Context được nhắc đến như một khái niệm quan trọng trong mô hình ngôn ngữ lớn, và được sử dụng để đo lường và tính toán trong các mô hình AI.",
+    "sourceChunk": 3,
+    "tier": "supporting"
+  },
+  {
+    "name": "Attention",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Khái niệm attention trong kiến trúc Transformer giúp mô hình chú ý vào đúng những chỗ quan trọng",
+    "evidence": [
+      {
+        "segmentId": "T04-053",
+        "quote": "bản chất là để một mô hình có thể làm được việc này rất tốt, thì nó phải chú ý được đúng cái nơi nó cần chú ý"
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh tầm quan trọng của attention trong kiến trúc Transformer",
+    "sourceChunk": 4,
+    "tier": "core"
+  },
+  {
+    "name": "Multi-head Attention",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Kỹ thuật multi-head attention giúp mô hình nhìn ra nhiều góc độ khác nhau",
+    "evidence": [
+      {
+        "segmentId": "T04-056",
+        "quote": "mục đích của việc này là: trong một nội dung, một khối lượng văn bản chẳng hạn, chúng ta phải nhìn ra được nhiều quy luật khác nhau"
+      }
+    ],
+    "reason": "Giảng viên giải thích kỹ thuật multi-head attention và lợi ích của nó",
+    "sourceChunk": 4,
+    "tier": "important"
+  },
+  {
+    "name": "Quản lý Context",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Quản lý context là việc quản lý cửa sổ ngữ cảnh để mô hình có thể nhìn ra được toàn bộ cả câu",
+    "evidence": [
+      {
+        "segmentId": "T04-053",
+        "quote": "thế nên cái cuối cùng của việc chúng ta vận dụng, xây dựng các sản phẩm AI, hay là chúng ta làm việc với AI thôi, vibe code với AI thôi — thì việc quản lý cái cửa sổ ngữ cảnh này rất là quan trọng"
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh tầm quan trọng của quản lý context trong việc xây dựng sản phẩm AI",
+    "sourceChunk": 4,
+    "tier": "core"
+  },
+  {
+    "name": "Reinforcement Learning with Human Feedback (RLHF)",
+    "tier_suggestion": "important",
+    "short_summary": "Kỹ thuật RLHF giúp mô hình học hỏi từ con người và cải thiện khả năng của mình",
+    "uncertain_signal": false,
+    "evidence": [
+      {
+        "segmentId": "T04-059",
+        "quote": "làm thế nào để mô hình nó thông minh hơn. Nó sẽ dựa trên một công nghệ, một kỹ thuật là reinforcement learning với con người tham gia — viết tắt là RLHF"
+      }
+    ],
+    "reason": "Giảng viên giải thích kỹ thuật RLHF và lợi ích của nó trong việc cải thiện khả năng của mô hình",
+    "sourceChunk": 4,
+    "tier": "important"
+  },
+  {
+    "name": "Tham số (Parameter)",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Tham số là một khái niệm trong mô hình AI, nó càng nhiều thì mô hình càng mạnh",
+    "evidence": [
+      {
+        "segmentId": "T04-058",
+        "quote": "các mô hình mới khi công bố thì hay có một cái là đã được đào tạo trên bao nhiêu parameter"
+      }
+    ],
+    "reason": "Giảng viên giải thích khái niệm tham số và tầm quan trọng của nó trong mô hình AI",
+    "sourceChunk": 4,
+    "tier": "supporting"
+  },
+  {
+    "name": "AI Agent",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "AI agent là một mô hình có khả năng tương tác với thế giới",
+    "evidence": [
+      {
+        "segmentId": "T04-073",
+        "quote": "Xuất phát điểm của chúng ta là từ một mô hình thôi. Bây giờ chúng ta làm cho mô hình có tay, có chân, có bộ não, có thêm nhiều ngữ cảnh khác để làm được việc — đấy là con đường đi đến AI agent."
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh AI agent là con đường phát triển của mô hình",
+    "sourceChunk": 5,
+    "tier": "core"
+  },
+  {
+    "name": "Evaluation",
+    "tier_suggestion": "core",
+    "uncertain_signal": false,
+    "short_summary": "Evaluation là quá trình đánh giá kết quả đầu ra của mô hình",
+    "evidence": [
+      {
+        "segmentId": "T04-075",
+        "quote": "Và quan trọng nhất — mình nghĩ quyết định đến 80%, và mình rất muốn nhắc tất cả mọi người trong khóa học này — đấy là evaluation."
+      }
+    ],
+    "reason": "Giảng viên nhấn mạnh evaluation là quan trọng nhất trong quá trình xây dựng sản phẩm",
+    "sourceChunk": 5,
+    "tier": "core"
+  },
+  {
+    "name": "Mixture of Experts",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Mixture of Experts là kiến trúc giúp tiết kiệm chi phí và tăng tốc độ xử lý",
+    "evidence": [
+      {
+        "segmentId": "T04-086",
+        "quote": "Nghĩa là thay vì cứ một câu hỏi bạn phải chạy qua toàn bộ các tham số để trả lời — sẽ bị lãng phí — thì bạn tách toàn bộ thành các cụm nhỏ hơn, và tùy vào task, bạn sẽ chỉ chạy và kích hoạt một số cụm đấy thôi."
+      }
+    ],
+    "reason": "Giảng viên giải thích Mixture of Experts giúp tiết kiệm chi phí và tăng tốc độ xử lý",
+    "sourceChunk": 5,
+    "tier": "important"
+  },
+  {
+    "name": "Gọi API mô hình LLM",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Gọi API mô hình LLM cần hiểu về đầu vào và đầu ra, cũng như các cấu phần cần tinh chỉnh",
+    "evidence": [
+      {
+        "segmentId": "T04-087",
+        "quote": "Khi bạn gọi API của một mô hình LLM, luôn có đầu vào và đầu ra — có in và có out."
+      }
+    ],
+    "reason": "Giảng viên giải thích gọi API mô hình LLM cần hiểu về đầu vào và đầu ra",
+    "sourceChunk": 5,
+    "tier": "supporting"
+  },
+  {
+    "name": "Transformer",
+    "tier_suggestion": "important",
+    "uncertain_signal": false,
+    "short_summary": "Transformer áp dụng cơ chế attention để xử lý dữ liệu chuỗi",
+    "evidence": [
+      {
+        "segmentId": "T04-094",
+        "quote": "Transformer áp dụng cơ chế attention để xử lý dữ liệu chuỗi"
+      }
+    ],
+    "reason": "Giảng viên giải thích về Transformer và cơ chế attention của nó",
+    "sourceChunk": 6,
+    "tier": "important"
+  },
+  {
+    "name": "Cơ chế attention",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Cơ chế attention cho phép xử lý dữ liệu chuỗi song song",
+    "evidence": [
+      {
+        "segmentId": "T04-094",
+        "quote": "còn Transformer dùng cơ chế attention nên xử lý được song song trên tất cả các từ"
+      }
+    ],
+    "reason": "Giảng viên giải thích về lợi ích của cơ chế attention trong Transformer",
+    "sourceChunk": 6,
+    "tier": "supporting"
+  },
+  {
+    "name": "Vòng lặp autoregressive của LLM",
+    "tier_suggestion": "supporting",
+    "uncertain_signal": false,
+    "short_summary": "Vòng lặp autoregressive của LLM bao gồm predict, append và rerun",
+    "evidence": [
+      {
+        "segmentId": "T04-096",
+        "quote": "Vòng lặp đúng trong sinh văn bản autoregressive của LLM: predict, append và rerun"
+      }
+    ],
+    "reason": "Giảng viên giải thích về vòng lặp autoregressive của LLM",
+    "sourceChunk": 6,
+    "tier": "supporting"
+  }
+]
